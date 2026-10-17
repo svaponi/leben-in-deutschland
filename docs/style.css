@@ -18,8 +18,6 @@ h2 { font-size: 1.15rem; margin: 4px 0 16px; }
 #answers button.correct { background: #dcfce7; border-color: #16a34a; }
 #answers button.wrong { background: #fee2e2; border-color: #dc2626; }
 #explanation { background: #f9fafb; border-left: 4px solid #9ca3af; padding: 10px 12px; font-size: .9rem; }
-#next { margin-top: 16px; padding: 10px 18px; font: inherit; font-weight: 600; background: #2563eb;
-  color: #fff; border: 0; border-radius: 8px; cursor: pointer; }
 footer { text-align: center; margin-top: 16px; }
 .link { background: none; border: 0; color: #6b7280; text-decoration: underline; cursor: pointer; font-size: .8rem; }
 [hidden] { display: none !important; }
