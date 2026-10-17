@@ -11,13 +11,22 @@ const idx = () => byNumber.get(state.current) ?? 0;
 const isRight = q => state.answers[q.number] === q.correct;
 
 // --- speech ---
+let germanVoice = null;
+function pickVoice() {
+  if (!('speechSynthesis' in window)) return;
+  const de = speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().replace('_', '-').startsWith('de'));
+  germanVoice = de.find(v => v.lang.toLowerCase().replace('_', '-') === 'de-de') || de[0] || null;
+}
+if ('speechSynthesis' in window) {
+  pickVoice();
+  speechSynthesis.addEventListener('voiceschanged', pickVoice); // voices load asynchronously
+}
 function speak(text) {
   if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'de-DE';
-  const v = speechSynthesis.getVoices().find(v => v.lang.startsWith('de'));
-  if (v) u.voice = v;
+  if (germanVoice) u.voice = germanVoice;
   speechSynthesis.speak(u);
 }
 
@@ -111,11 +120,6 @@ const step = d => {
 $('prev').onclick = () => step(-1);
 $('next').onclick = () => step(1);
 $('toggle-grid').onclick = () => { $('grid').hidden = !$('grid').hidden; };
-$('jump-form').onsubmit = e => {
-  e.preventDefault();
-  go(+$('jump').value);
-  $('jump').value = '';
-};
 $('speak').onclick = () => speak(QUESTIONS[idx()].question);
 $('auto-speak').checked = state.autoSpeak;
 $('auto-speak').onchange = e => {
