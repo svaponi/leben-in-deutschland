@@ -2,7 +2,7 @@ const KEY = 'lid-progress-v2';
 const $ = id => document.getElementById(id);
 
 // state: { answers: { [number]: chosenIndex }, current: number, autoSpeak: bool }
-const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de', queue: null },
+const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de' },
   JSON.parse(localStorage.getItem(KEY) || '{}'));
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
@@ -17,7 +17,7 @@ const UI = {
     overview: 'Übersicht', continue: 'Nächste Frage →', autoSpeak: 'automatisch vorlesen',
     reset: 'Fortschritt zurücksetzen', confirmReset: 'Fortschritt wirklich zurücksetzen?',
     sayAnswer: 'Antwort vorlesen', general: 'Allgemeine Fragen', speechLang: 'de-DE',
-    retryWrong: n => `Falsche Fragen wiederholen (${n})`, retryActive: n => `Nur falsche Fragen (${n})`, retryExit: 'Alle Fragen',
+    resetWrong: n => `Falsche Fragen zurücksetzen (${n})`,
     stats: (a, n, r) => `${a} / ${n} beantwortet · ${r} richtig`,
     qnum: (q, n) => `Frage ${q} von ${n}`,
   },
@@ -25,7 +25,7 @@ const UI = {
     overview: 'Overview', continue: 'Next question →', autoSpeak: 'read aloud automatically',
     reset: 'Reset progress', confirmReset: 'Really reset your progress?',
     sayAnswer: 'Read answer aloud', general: 'General questions', speechLang: 'en-US',
-    retryWrong: n => `Retry wrong questions (${n})`, retryActive: n => `Wrong questions only (${n})`, retryExit: 'All questions',
+    resetWrong: n => `Reset wrong questions (${n})`,
     stats: (a, n, r) => `${a} / ${n} answered · ${r} correct`,
     qnum: (q, n) => `Question ${q} of ${n}`,
   },
@@ -41,10 +41,8 @@ const idx = () => byNumber.get(state.current) ?? 0;
 const isRight = q => state.answers[q.number] === q.correct;
 const wrongNumbers = () => QUESTIONS.filter(q => q.number in state.answers && !isRight(q)).map(q => q.number);
 
-// questions the prev/next navigation walks through: all, or only the retry queue
-const inOrder = () => (state.queue ? QUESTIONS.filter(q => state.queue.includes(q.number)) : QUESTIONS);
 function neighbour(d) {
-  const list = inOrder().map(q => byNumber.get(q.number));
+  const list = QUESTIONS.map((_, i) => i);
   const cur = idx();
   const i = d > 0 ? list.find(i => i > cur) : list.findLast(i => i < cur);
   return i === undefined ? null : QUESTIONS[i].number;
@@ -53,7 +51,7 @@ function neighbour(d) {
 // where the "next question" button leads: the next unanswered question (wrapping around),
 // or plain next once everything has been answered
 function nextTarget() {
-  const list = inOrder().map(q => q.number);
+  const list = QUESTIONS.map(q => q.number);
   const at = list.findIndex(n => byNumber.get(n) > idx());
   const after = at < 0 ? [] : list.slice(at);
   const before = at < 0 ? list : list.slice(0, at);
@@ -61,24 +59,15 @@ function nextTarget() {
   return open ?? neighbour(1);
 }
 
-// retry: forget the wrong answers so they can be answered again, and walk through just those
-function startRetry() {
-  const wrong = wrongNumbers();
-  if (!wrong.length) return;
-  wrong.forEach(n => delete state.answers[n]);
-  state.queue = wrong;
-  go(wrong[0]);
-}
-function endRetry() {
-  state.queue = null;
+// forget the wrong answers: they become unanswered again and show up in the next-question loop
+function resetWrong() {
+  wrongNumbers().forEach(n => delete state.answers[n]);
   show(false);
 }
-function renderRetry() {
-  const n = state.queue ? state.queue.length : wrongNumbers().length;
-  $('retry-bar').hidden = !n;
-  $('retry-info').textContent = state.queue ? ui().retryActive(n) : '';
-  $('retry').textContent = state.queue ? ui().retryExit : ui().retryWrong(n);
-  $('retry').onclick = state.queue ? endRetry : startRetry;
+function renderResetWrong() {
+  const n = wrongNumbers().length;
+  $('reset-wrong').hidden = !n;
+  $('reset-wrong').textContent = ui().resetWrong(n);
 }
 
 // --- speech ---
@@ -179,7 +168,7 @@ function show(userInitiated) {
   $('next').disabled = neighbour(1) === null;
   renderStats();
   renderGrid();
-  renderRetry();
+  renderResetWrong();
   if (state.autoSpeak && userInitiated) speak(v.text);
 }
 
@@ -190,7 +179,7 @@ function answer(q, i) {
   paintAnswers(q);
   renderStats();
   renderGrid();
-  renderRetry();
+  renderResetWrong();
 }
 
 function go(n) {
@@ -216,10 +205,10 @@ $('auto-speak').onchange = e => {
   save();
   if (state.autoSpeak) speak(view(QUESTIONS[idx()]).text);
 };
+$('reset-wrong').onclick = resetWrong;
 $('reset').onclick = () => {
   if (!confirm(ui().confirmReset)) return;
   state.answers = {};
-  state.queue = null;
   state.current = QUESTIONS[0].number;
   show(true);
 };

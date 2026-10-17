@@ -23,7 +23,6 @@ h2 { font-size: 1.15rem; }
 #answers .ans.wrong { background: #fee2e2; border-color: #dc2626; }
 #explanation { background: #f9fafb; border-left: 4px solid #9ca3af; padding: 10px 12px; font-size: .9rem; }
 footer { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 20px; margin-top: 16px; }
-#retry-bar { display: flex; align-items: center; gap: 8px; font-size: .8rem; color: #4b5563; }
 .link { background: none; border: 0; color: #6b7280; text-decoration: underline; cursor: pointer; font-size: .8rem; }
 [hidden] { display: none !important; }
 
