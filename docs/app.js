@@ -135,10 +135,10 @@ function setStates(list) {
 
 let gridFor = null;
 function renderGrid() {
-  const g = $('grid-items');
   if (gridFor !== state.states.join()) { // rebuild when the selected states change
     gridFor = state.states.join();
-    g.innerHTML = '';
+    $('grid-general').innerHTML = '';
+    $('grid-states').innerHTML = '';
     let region = null;
     activeQuestions().forEach(q => {
       if (q.region !== region) {
@@ -147,17 +147,17 @@ function renderGrid() {
         h.className = 'grid-heading' + (region === 'de' ? '' : ' state');
         if (region === 'de') h.dataset.i18n = 'general';
         h.textContent = region === 'de' ? ui().general : STATES[region];
-        g.append(h);
+        (region === 'de' ? $('grid-general') : $('grid-states')).append(h);
       }
       const b = document.createElement('button');
       b.textContent = q.number;
       b.dataset.n = q.number;
       if (region !== 'de') { b.classList.add('state'); b.title = STATES[region]; }
       b.onclick = () => go(q.number);
-      g.append(b);
+      (region === 'de' ? $('grid-general') : $('grid-states')).append(b);
     });
   }
-  for (const b of g.querySelectorAll('button')) {
+  for (const b of $('grid').querySelectorAll('.grid-items button')) {
     const q = QUESTIONS[byNumber.get(+b.dataset.n)];
     b.classList.toggle('ok', q.number in state.answers && isRight(q));
     b.classList.toggle('bad', q.number in state.answers && !isRight(q));

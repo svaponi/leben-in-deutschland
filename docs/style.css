@@ -32,17 +32,17 @@ footer { display: flex; justify-content: center; align-items: center; flex-wrap:
 .toolbar #toggle-grid { flex: 1; }
 .toolbar button:hover:not(:disabled) { border-color: #2563eb; }
 .toolbar button:disabled { opacity: .4; cursor: default; }
-#grid { margin-bottom: 12px; }
-#grid-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 4px; max-height: 260px; overflow-y: auto; }
-#grid-items button { padding: 6px 0; font-size: .8rem; background: #e5e7eb; border: 2px solid transparent; border-radius: 6px; cursor: pointer; }
-#grid-items button.ok { background: #bbf7d0; }
-#grid-items button.bad { background: #fecaca; }
-#grid-items button.cur { border-color: #2563eb; }
+#grid { margin-bottom: 12px; max-height: 60vh; overflow-y: auto; }
+.grid-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 4px; }
+.grid-items button { padding: 6px 0; font-size: .8rem; background: #e5e7eb; border: 2px solid transparent; border-radius: 6px; cursor: pointer; }
+.grid-items button.ok { background: #bbf7d0; }
+.grid-items button.bad { background: #fecaca; }
+.grid-items button.cur { border-color: #2563eb; }
 .speech { margin-top: 16px; display: flex; justify-content: space-between; align-items: center; font-size: .85rem; color: #4b5563; }
 .grid-heading { grid-column: 1 / -1; font-size: .75rem; font-weight: 600; color: #6b7280; margin-top: 6px; }
 .grid-heading.state { color: #7c3aed; border-bottom: 2px solid #c4b5fd; }
-#grid-items button.state { border-bottom: 3px solid #a78bfa; }
-#grid-items button.state.cur { border-color: #2563eb; }
+.grid-items button.state { border-bottom: 3px solid #a78bfa; }
+.grid-items button.state.cur { border-color: #2563eb; }
 #continue { display: block; width: 100%; margin-top: 16px; padding: 12px; font: inherit; font-weight: 600; background: #2563eb; color: #fff; border: 0; border-radius: 8px; cursor: pointer; }
 #continue:hover { background: #1d4ed8; }
 #answers .ans { flex: 1; }
@@ -54,7 +54,7 @@ footer { display: flex; justify-content: center; align-items: center; flex-wrap:
 #lang .link { font-size: inherit; }
 #lang .link.active { color: #1f2937; font-weight: 700; text-decoration: none; }
 #explanation { margin-top: 16px; }
-#state-filter { margin-bottom: 10px; font-size: .8rem; color: #4b5563; }
+#state-filter { margin: 16px 0 10px; padding-top: 12px; border-top: 1px solid #e5e7eb; font-size: .8rem; color: #4b5563; }
 #state-filter > span { font-weight: 600; margin-right: 8px; }
 #state-filter .link { margin-right: 6px; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 6px; }
