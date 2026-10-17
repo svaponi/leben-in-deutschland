@@ -14,14 +14,14 @@ const STATES = {
 };
 const UI = {
   de: {
-    overview: 'Übersicht', continue: 'Nächste Frage →', speak: '🔊 Vorlesen', autoSpeak: 'automatisch vorlesen',
+    overview: 'Übersicht', continue: 'Nächste Frage →', autoSpeak: 'automatisch vorlesen',
     reset: 'Fortschritt zurücksetzen', confirmReset: 'Fortschritt wirklich zurücksetzen?',
     sayAnswer: 'Antwort vorlesen', general: 'Allgemeine Fragen', speechLang: 'de-DE',
     stats: (a, n, r) => `${a} / ${n} beantwortet · ${r} richtig`,
     qnum: (q, n) => `Frage ${q} von ${n}`,
   },
   en: {
-    overview: 'Overview', continue: 'Next question →', speak: '🔊 Read aloud', autoSpeak: 'read aloud automatically',
+    overview: 'Overview', continue: 'Next question →', autoSpeak: 'read aloud automatically',
     reset: 'Reset progress', confirmReset: 'Really reset your progress?',
     sayAnswer: 'Read answer aloud', general: 'General questions', speechLang: 'en-US',
     stats: (a, n, r) => `${a} / ${n} answered · ${r} correct`,
@@ -164,7 +164,7 @@ $('prev').onclick = () => step(-1);
 $('next').onclick = () => step(1);
 $('continue').onclick = () => step(1);
 $('toggle-grid').onclick = () => { $('grid').hidden = !$('grid').hidden; };
-$('speak').onclick = () => speak(view(QUESTIONS[idx()]).text);
+$('say-question').onclick = () => speak(view(QUESTIONS[idx()]).text);
 $('auto-speak').checked = state.autoSpeak;
 $('auto-speak').onchange = e => {
   state.autoSpeak = e.target.checked;
@@ -186,15 +186,17 @@ document.addEventListener('keydown', e => {
 
 function applyLang() {
   document.documentElement.lang = state.lang;
-  $('lang').value = state.lang;
+  document.querySelectorAll('#lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === state.lang));
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = ui()[el.dataset.i18n]; });
 }
-$('lang').onchange = e => {
-  state.lang = e.target.value;
-  window.speechSynthesis?.cancel();
-  applyLang();
-  show(false);
-};
+document.querySelectorAll('#lang button').forEach(b => {
+  b.onclick = () => {
+    state.lang = b.dataset.lang;
+    window.speechSynthesis?.cancel();
+    applyLang();
+    show(false);
+  };
+});
 
 applyLang();
 show(false); // no auto speech on load: browsers block it until the first user interaction

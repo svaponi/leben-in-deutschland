@@ -11,10 +11,7 @@
   <header>
     <div class="title-row">
       <h1>Leben in Deutschland</h1>
-      <select id="lang" aria-label="Sprache / Language">
-        <option value="de">Deutsch</option>
-        <option value="en">English</option>
-      </select>
+      <div id="lang"><button class="link" data-lang="de">de</button> | <button class="link" data-lang="en">en</button></div>
     </div>
     <div id="stats"></div>
     <div class="bar"><div id="bar-fill"></div></div>
@@ -30,13 +27,15 @@
 
   <section id="card">
     <p id="qnum"></p>
-    <h2 id="question"></h2>
+    <div class="q-row">
+      <h2 id="question"></h2>
+      <button id="say-question" class="say">🔊</button>
+    </div>
     <img id="image" alt="" hidden>
     <ul id="answers"></ul>
-    <p id="explanation" hidden></p>
     <button id="continue" hidden data-i18n="continue">Nächste Frage →</button>
+    <p id="explanation" hidden></p>
     <div class="speech">
-      <button id="speak" class="link" data-i18n="speak">🔊 Vorlesen</button>
       <label><input type="checkbox" id="auto-speak"> <span data-i18n="autoSpeak">automatisch vorlesen</span></label>
     </div>
   </section>
