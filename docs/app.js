@@ -2,7 +2,7 @@ const KEY = 'lid-progress-v2';
 const $ = id => document.getElementById(id);
 
 // state: { answers: { [number]: chosenIndex }, current: number, autoSpeak: bool }
-const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de' },
+const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de', states: ['be'] },
   JSON.parse(localStorage.getItem(KEY) || '{}'));
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
@@ -14,7 +14,7 @@ const STATES = {
 };
 const UI = {
   de: {
-    overview: 'Übersicht', continue: 'Nächste Frage →', autoSpeak: 'automatisch vorlesen',
+    overview: 'Übersicht', states: 'Bundesländer', all: 'alle', none: 'keine', continue: 'Nächste Frage →', autoSpeak: 'automatisch vorlesen',
     reset: 'Fortschritt zurücksetzen', confirmReset: 'Fortschritt wirklich zurücksetzen?',
     sayAnswer: 'Antwort vorlesen', general: 'Allgemeine Fragen', speechLang: 'de-DE',
     resetWrong: n => `Falsche Fragen zurücksetzen (${n})`,
@@ -22,7 +22,7 @@ const UI = {
     qnum: (q, n) => `Frage ${q} von ${n}`,
   },
   en: {
-    overview: 'Overview', continue: 'Next question →', autoSpeak: 'read aloud automatically',
+    overview: 'Overview', states: 'Federal states', all: 'all', none: 'none', continue: 'Next question →', autoSpeak: 'read aloud automatically',
     reset: 'Reset progress', confirmReset: 'Really reset your progress?',
     sayAnswer: 'Read answer aloud', general: 'General questions', speechLang: 'en-US',
     resetWrong: n => `Reset wrong questions (${n})`,
@@ -39,10 +39,13 @@ function view(q) {
 const byNumber = new Map(QUESTIONS.map((q, i) => [q.number, i]));
 const idx = () => byNumber.get(state.current) ?? 0;
 const isRight = q => state.answers[q.number] === q.correct;
-const wrongNumbers = () => QUESTIONS.filter(q => q.number in state.answers && !isRight(q)).map(q => q.number);
+// general questions plus those of the selected Bundesländer
+const isActive = q => q.region === 'de' || state.states.includes(q.region);
+const activeQuestions = () => QUESTIONS.filter(isActive);
+const wrongNumbers = () => activeQuestions().filter(q => q.number in state.answers && !isRight(q)).map(q => q.number);
 
 function neighbour(d) {
-  const list = QUESTIONS.map((_, i) => i);
+  const list = activeQuestions().map(q => byNumber.get(q.number));
   const cur = idx();
   const i = d > 0 ? list.find(i => i > cur) : list.findLast(i => i < cur);
   return i === undefined ? null : QUESTIONS[i].number;
@@ -51,7 +54,7 @@ function neighbour(d) {
 // where the "next question" button leads: the next unanswered question (wrapping around),
 // or plain next once everything has been answered
 function nextTarget() {
-  const list = QUESTIONS.map(q => q.number);
+  const list = activeQuestions().map(q => q.number);
   const at = list.findIndex(n => byNumber.get(n) > idx());
   const after = at < 0 ? [] : list.slice(at);
   const before = at < 0 ? list : list.slice(0, at);
@@ -89,17 +92,55 @@ function speak(text) {
 
 // --- rendering ---
 function renderStats() {
-  const answered = Object.keys(state.answers).length;
-  const right = QUESTIONS.filter(q => q.number in state.answers && isRight(q)).length;
-  $('stats').textContent = ui().stats(answered, QUESTIONS.length, right);
-  $('bar-fill').style.width = `${(answered / QUESTIONS.length) * 100}%`;
+  const active = activeQuestions();
+  const answered = active.filter(q => q.number in state.answers).length;
+  const right = active.filter(q => q.number in state.answers && isRight(q)).length;
+  $('stats').textContent = ui().stats(answered, active.length, right);
+  $('bar-fill').style.width = `${(answered / active.length) * 100}%`;
 }
 
+function buildStateFilter() {
+  const f = $('state-filter');
+  const label = document.createElement('span');
+  label.dataset.i18n = 'states';
+  f.append(label);
+  const quick = (key, value) => {
+    const b = document.createElement('button');
+    b.className = 'link';
+    b.dataset.i18n = key;
+    b.onclick = () => setStates(value);
+    f.append(b);
+  };
+  quick('all', Object.keys(STATES));
+  quick('none', []);
+  const chips = document.createElement('div');
+  chips.className = 'chips';
+  for (const [code, name] of Object.entries(STATES)) {
+    const l = document.createElement('label');
+    const c = document.createElement('input');
+    c.type = 'checkbox';
+    c.value = code;
+    c.onchange = () => setStates(Object.keys(STATES).filter(k =>
+      k === code ? c.checked : state.states.includes(k)));
+    l.append(c, ' ' + name);
+    chips.append(l);
+  }
+  f.append(chips);
+}
+function setStates(list) {
+  state.states = list;
+  save();
+  show(false);
+}
+
+let gridFor = null;
 function renderGrid() {
-  const g = $('grid');
-  if (!g.children.length) {
+  const g = $('grid-items');
+  if (gridFor !== state.states.join()) { // rebuild when the selected states change
+    gridFor = state.states.join();
+    g.innerHTML = '';
     let region = null;
-    QUESTIONS.forEach(q => {
+    activeQuestions().forEach(q => {
       if (q.region !== region) {
         region = q.region;
         const h = document.createElement('div');
@@ -122,6 +163,7 @@ function renderGrid() {
     b.classList.toggle('bad', q.number in state.answers && !isRight(q));
     b.classList.toggle('cur', q.number === state.current);
   }
+  document.querySelectorAll('#state-filter input').forEach(c => { c.checked = state.states.includes(c.value); });
 }
 
 function paintAnswers(q) {
@@ -233,6 +275,7 @@ function setLang(lang) {
 }
 document.querySelectorAll('#lang button').forEach(b => { b.onclick = () => setLang(b.dataset.lang); });
 
+buildStateFilter();
 applyLang();
 // a focused button would otherwise be clicked when space is released
 document.addEventListener('keyup', e => { if (e.key === ' ' && e.target.tagName !== 'INPUT') e.preventDefault(); });
