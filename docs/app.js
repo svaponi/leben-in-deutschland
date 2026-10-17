@@ -81,6 +81,7 @@ function paintAnswers(q) {
     if (done && j === q.correct) b.className = 'correct';
     else if (done && j === chosen) b.className = 'wrong';
   });
+  $('continue').hidden = !(done && idx() < QUESTIONS.length - 1);
   $('explanation').hidden = !(done && q.explanation);
   $('explanation').textContent = q.explanation || '';
 }
@@ -135,6 +136,7 @@ const step = d => {
 // --- events ---
 $('prev').onclick = () => step(-1);
 $('next').onclick = () => step(1);
+$('continue').onclick = () => step(1);
 $('toggle-grid').onclick = () => { $('grid').hidden = !$('grid').hidden; };
 $('speak').onclick = () => speak(QUESTIONS[idx()].question);
 $('auto-speak').checked = state.autoSpeak;
