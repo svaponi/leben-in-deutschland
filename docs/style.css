@@ -53,3 +53,5 @@ footer { text-align: center; margin-top: 16px; }
 #lang .link { font-size: inherit; }
 #lang .link.active { color: #1f2937; font-weight: 700; text-decoration: none; }
 #explanation { margin-top: 16px; }
+#retry-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: .85rem; color: #4b5563; }
+#retry-bar .link { font-size: .85rem; color: #2563eb; }

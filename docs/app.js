@@ -2,7 +2,7 @@ const KEY = 'lid-progress-v2';
 const $ = id => document.getElementById(id);
 
 // state: { answers: { [number]: chosenIndex }, current: number, autoSpeak: bool }
-const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de' },
+const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de', queue: null },
   JSON.parse(localStorage.getItem(KEY) || '{}'));
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
@@ -17,6 +17,7 @@ const UI = {
     overview: 'Übersicht', continue: 'Nächste Frage →', autoSpeak: 'automatisch vorlesen',
     reset: 'Fortschritt zurücksetzen', confirmReset: 'Fortschritt wirklich zurücksetzen?',
     sayAnswer: 'Antwort vorlesen', general: 'Allgemeine Fragen', speechLang: 'de-DE',
+    retryWrong: n => `Falsche Fragen wiederholen (${n})`, retryActive: n => `Nur falsche Fragen (${n})`, retryExit: 'Alle Fragen',
     stats: (a, n, r) => `${a} / ${n} beantwortet · ${r} richtig`,
     qnum: (q, n) => `Frage ${q} von ${n}`,
   },
@@ -24,6 +25,7 @@ const UI = {
     overview: 'Overview', continue: 'Next question →', autoSpeak: 'read aloud automatically',
     reset: 'Reset progress', confirmReset: 'Really reset your progress?',
     sayAnswer: 'Read answer aloud', general: 'General questions', speechLang: 'en-US',
+    retryWrong: n => `Retry wrong questions (${n})`, retryActive: n => `Wrong questions only (${n})`, retryExit: 'All questions',
     stats: (a, n, r) => `${a} / ${n} answered · ${r} correct`,
     qnum: (q, n) => `Question ${q} of ${n}`,
   },
@@ -37,6 +39,36 @@ function view(q) {
 const byNumber = new Map(QUESTIONS.map((q, i) => [q.number, i]));
 const idx = () => byNumber.get(state.current) ?? 0;
 const isRight = q => state.answers[q.number] === q.correct;
+const wrongNumbers = () => QUESTIONS.filter(q => q.number in state.answers && !isRight(q)).map(q => q.number);
+
+// questions the prev/next navigation walks through: all, or only the retry queue
+const inOrder = () => (state.queue ? QUESTIONS.filter(q => state.queue.includes(q.number)) : QUESTIONS);
+function neighbour(d) {
+  const list = inOrder().map(q => byNumber.get(q.number));
+  const cur = idx();
+  const i = d > 0 ? list.find(i => i > cur) : list.findLast(i => i < cur);
+  return i === undefined ? null : QUESTIONS[i].number;
+}
+
+// retry: forget the wrong answers so they can be answered again, and walk through just those
+function startRetry() {
+  const wrong = wrongNumbers();
+  if (!wrong.length) return;
+  wrong.forEach(n => delete state.answers[n]);
+  state.queue = wrong;
+  go(wrong[0]);
+}
+function endRetry() {
+  state.queue = null;
+  show(false);
+}
+function renderRetry() {
+  const n = state.queue ? state.queue.length : wrongNumbers().length;
+  $('retry-bar').hidden = !n;
+  $('retry-info').textContent = state.queue ? ui().retryActive(n) : '';
+  $('retry').textContent = state.queue ? ui().retryExit : ui().retryWrong(n);
+  $('retry').onclick = state.queue ? endRetry : startRetry;
+}
 
 // --- speech ---
 const norm = l => l.toLowerCase().replace('_', '-');
@@ -100,7 +132,7 @@ function paintAnswers(q) {
     b.classList.toggle('correct', done && j === q.correct);
     b.classList.toggle('wrong', done && j === chosen && j !== q.correct);
   });
-  $('continue').hidden = !(done && idx() < QUESTIONS.length - 1);
+  $('continue').hidden = !(done && neighbour(1) !== null);
   $('explanation').hidden = !(done && q.explanation);
   $('explanation').textContent = q.explanation || '';
 }
@@ -132,10 +164,11 @@ function show(userInitiated) {
     ul.append(li);
   });
   paintAnswers(q);
-  $('prev').disabled = idx() === 0;
-  $('next').disabled = idx() === QUESTIONS.length - 1;
+  $('prev').disabled = neighbour(-1) === null;
+  $('next').disabled = neighbour(1) === null;
   renderStats();
   renderGrid();
+  renderRetry();
   if (state.autoSpeak && userInitiated) speak(v.text);
 }
 
@@ -146,6 +179,7 @@ function answer(q, i) {
   paintAnswers(q);
   renderStats();
   renderGrid();
+  renderRetry();
 }
 
 function go(n) {
@@ -155,8 +189,8 @@ function go(n) {
   window.scrollTo({ top: 0 });
 }
 const step = d => {
-  const i = idx() + d;
-  if (i >= 0 && i < QUESTIONS.length) go(QUESTIONS[i].number);
+  const n = neighbour(d);
+  if (n !== null) go(n);
 };
 
 // --- events ---
@@ -174,6 +208,7 @@ $('auto-speak').onchange = e => {
 $('reset').onclick = () => {
   if (!confirm(ui().confirmReset)) return;
   state.answers = {};
+  state.queue = null;
   state.current = QUESTIONS[0].number;
   show(true);
 };
