@@ -11,12 +11,13 @@ section { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 1p
 h2 { font-size: 1.15rem; margin: 4px 0 16px; }
 #image { display: block; max-width: 100%; max-height: 280px; margin: 0 auto 16px; }
 #answers { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-#answers button { width: 100%; text-align: left; padding: 12px 14px; font: inherit; background: #fff;
+#answers li { display: flex; gap: 6px; }
+#answers .ans { width: 100%; text-align: left; padding: 12px 14px; font: inherit; background: #fff;
   border: 2px solid #d1d5db; border-radius: 8px; cursor: pointer; }
-#answers button:hover:not(:disabled) { border-color: #2563eb; }
-#answers button:disabled { cursor: default; }
-#answers button.correct { background: #dcfce7; border-color: #16a34a; }
-#answers button.wrong { background: #fee2e2; border-color: #dc2626; }
+#answers .ans:hover:not(:disabled) { border-color: #2563eb; }
+#answers .ans:disabled { cursor: default; }
+#answers .ans.correct { background: #dcfce7; border-color: #16a34a; }
+#answers .ans.wrong { background: #fee2e2; border-color: #dc2626; }
 #explanation { background: #f9fafb; border-left: 4px solid #9ca3af; padding: 10px 12px; font-size: .9rem; }
 footer { text-align: center; margin-top: 16px; }
 .link { background: none; border: 0; color: #6b7280; text-decoration: underline; cursor: pointer; font-size: .8rem; }
@@ -40,3 +41,6 @@ footer { text-align: center; margin-top: 16px; }
 #grid button.state.cur { border-color: #2563eb; }
 #continue { display: block; width: 100%; margin-top: 16px; padding: 12px; font: inherit; font-weight: 600; background: #2563eb; color: #fff; border: 0; border-radius: 8px; cursor: pointer; }
 #continue:hover { background: #1d4ed8; }
+#answers .ans { flex: 1; }
+#answers .say { flex: none; width: 44px; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; cursor: pointer; font-size: 1rem; }
+#answers .say:hover { border-color: #2563eb; }

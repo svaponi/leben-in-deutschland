@@ -75,11 +75,10 @@ function renderGrid() {
 function paintAnswers(q) {
   const chosen = state.answers[q.number];
   const done = chosen !== undefined;
-  [...$('answers').querySelectorAll('button')].forEach((b, j) => {
+  [...$('answers').querySelectorAll('.ans')].forEach((b, j) => {
     b.disabled = done;
-    b.className = '';
-    if (done && j === q.correct) b.className = 'correct';
-    else if (done && j === chosen) b.className = 'wrong';
+    b.classList.toggle('correct', done && j === q.correct);
+    b.classList.toggle('wrong', done && j === chosen && j !== q.correct);
   });
   $('continue').hidden = !(done && idx() < QUESTIONS.length - 1);
   $('explanation').hidden = !(done && q.explanation);
@@ -101,8 +100,15 @@ function show(userInitiated) {
     const li = document.createElement('li');
     const b = document.createElement('button');
     b.textContent = text;
+    b.className = 'ans';
     b.onclick = () => answer(q, i);
-    li.append(b);
+    const s = document.createElement('button');
+    s.textContent = '🔊';
+    s.className = 'say';
+    s.title = 'Antwort vorlesen';
+    s.setAttribute('aria-label', 'Antwort vorlesen');
+    s.onclick = () => speak(text);
+    li.append(b, s);
     ul.append(li);
   });
   paintAnswers(q);
