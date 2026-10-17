@@ -12,21 +12,30 @@
     <h1>Leben in Deutschland</h1>
     <div id="stats"></div>
     <div class="bar"><div id="bar-fill"></div></div>
-    <label class="opt"><input type="checkbox" id="berlin"> Berlin-Fragen (321–330) einbeziehen</label>
   </header>
 
-  <section id="card" hidden>
+  <nav class="toolbar">
+    <button id="prev" title="Vorherige (←)">←</button>
+    <button id="toggle-grid">Übersicht</button>
+    <form id="jump-form">
+      <input id="jump" type="number" min="1" placeholder="Nr." aria-label="Zu Frage springen">
+      <button>Los</button>
+    </form>
+    <button id="next" title="Nächste (→)">→</button>
+  </nav>
+
+  <section id="grid" hidden></section>
+
+  <section id="card">
     <p id="qnum"></p>
     <h2 id="question"></h2>
     <img id="image" alt="" hidden>
     <ul id="answers"></ul>
     <p id="explanation" hidden></p>
-    <button id="next" hidden>Nächste Frage →</button>
-  </section>
-
-  <section id="done" hidden>
-    <h2>Geschafft! 🎉</h2>
-    <p>Du hast alle Fragen mindestens einmal richtig beantwortet.</p>
+    <div class="speech">
+      <button id="speak" class="link">🔊 Vorlesen</button>
+      <label><input type="checkbox" id="auto-speak"> automatisch vorlesen</label>
+    </div>
   </section>
 
   <footer><button id="reset" class="link">Fortschritt zurücksetzen</button></footer>

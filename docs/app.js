@@ -1,45 +1,74 @@
-const KEY = 'lid-progress-v1';
+const KEY = 'lid-progress-v2';
 const $ = id => document.getElementById(id);
 
-// state: { stats: { [number]: { right, wrong, last } }, berlin: bool, current: number|null }
-const state = Object.assign({ stats: {}, berlin: false, current: null },
+// state: { answers: { [number]: chosenIndex }, current: number, autoSpeak: bool }
+const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false },
   JSON.parse(localStorage.getItem(KEY) || '{}'));
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
-const pool = () => QUESTIONS.filter(q => q.region === 'de' || state.berlin);
-const mastered = q => state.stats[q.number]?.last === true;
+const byNumber = new Map(QUESTIONS.map((q, i) => [q.number, i]));
+const idx = () => byNumber.get(state.current) ?? 0;
+const isRight = q => state.answers[q.number] === q.correct;
 
-function pickNext() {
-  const open = pool().filter(q => !mastered(q));
-  if (!open.length) return null;
-  // prefer questions never seen, then previously wrong ones
-  const fresh = open.filter(q => !state.stats[q.number]);
-  const src = fresh.length && Math.random() < 0.7 ? fresh : open;
-  const candidates = src.length > 1 ? src.filter(q => q.number !== state.current) : src;
-  return candidates[Math.floor(Math.random() * candidates.length)];
+// --- speech ---
+function speak(text) {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'de-DE';
+  const v = speechSynthesis.getVoices().find(v => v.lang.startsWith('de'));
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
 }
 
+// --- rendering ---
 function renderStats() {
-  const p = pool();
-  const done = p.filter(mastered).length;
-  const seen = p.filter(q => state.stats[q.number]).length;
-  $('stats').textContent = `${done} / ${p.length} richtig beantwortet · ${seen} gesehen`;
-  $('bar-fill').style.width = `${(done / p.length) * 100}%`;
+  const answered = Object.keys(state.answers).length;
+  const right = QUESTIONS.filter(q => q.number in state.answers && isRight(q)).length;
+  $('stats').textContent = `${answered} / ${QUESTIONS.length} beantwortet · ${right} richtig`;
+  $('bar-fill').style.width = `${(answered / QUESTIONS.length) * 100}%`;
 }
 
-function show(q) {
-  $('card').hidden = !q;
-  $('done').hidden = !!q;
-  renderStats();
-  if (!q) { state.current = null; save(); return; }
+function renderGrid() {
+  const g = $('grid');
+  if (!g.children.length) {
+    QUESTIONS.forEach(q => {
+      const b = document.createElement('button');
+      b.textContent = q.number;
+      b.dataset.n = q.number;
+      b.onclick = () => go(q.number);
+      g.append(b);
+    });
+  }
+  for (const b of g.children) {
+    const q = QUESTIONS[byNumber.get(+b.dataset.n)];
+    b.className = (q.number in state.answers ? (isRight(q) ? 'ok' : 'bad') : '') +
+      (q.number === state.current ? ' cur' : '');
+  }
+}
+
+function paintAnswers(q) {
+  const chosen = state.answers[q.number];
+  const done = chosen !== undefined;
+  [...$('answers').querySelectorAll('button')].forEach((b, j) => {
+    b.disabled = done;
+    b.className = '';
+    if (done && j === q.correct) b.className = 'correct';
+    else if (done && j === chosen) b.className = 'wrong';
+  });
+  $('explanation').hidden = !(done && q.explanation);
+  $('explanation').textContent = q.explanation || '';
+}
+
+function show(userInitiated) {
+  const q = QUESTIONS[idx()];
   state.current = q.number;
   save();
-  $('qnum').textContent = `Frage ${q.number}`;
+  $('qnum').textContent = `Frage ${q.number} von ${QUESTIONS[QUESTIONS.length - 1].number}` +
+    (q.region === 'be' ? ' · Berlin' : '');
   $('question').textContent = q.question;
   $('image').hidden = !q.image;
   if (q.image) $('image').src = q.image;
-  $('explanation').hidden = true;
-  $('next').hidden = true;
   const ul = $('answers');
   ul.innerHTML = '';
   q.answers.forEach((text, i) => {
@@ -50,37 +79,61 @@ function show(q) {
     li.append(b);
     ul.append(li);
   });
+  paintAnswers(q);
+  $('prev').disabled = idx() === 0;
+  $('next').disabled = idx() === QUESTIONS.length - 1;
+  renderStats();
+  renderGrid();
+  if (state.autoSpeak && userInitiated) speak(q.question);
 }
 
 function answer(q, i) {
-  const ok = i === q.correct;
-  const s = state.stats[q.number] ||= { right: 0, wrong: 0, last: false };
-  s[ok ? 'right' : 'wrong']++;
-  s.last = ok;
+  if (q.number in state.answers) return;
+  state.answers[q.number] = i;
   save();
-  [...$('answers').querySelectorAll('button')].forEach((b, j) => {
-    b.disabled = true;
-    if (j === q.correct) b.classList.add('correct');
-    else if (j === i) b.classList.add('wrong');
-  });
-  if (q.explanation) {
-    $('explanation').textContent = q.explanation;
-    $('explanation').hidden = false;
-  }
-  $('next').hidden = false;
-  $('next').focus();
+  paintAnswers(q);
   renderStats();
+  renderGrid();
 }
 
-$('next').onclick = () => show(pickNext());
-$('berlin').checked = state.berlin;
-$('berlin').onchange = e => { state.berlin = e.target.checked; show(pickNext()); };
-$('reset').onclick = () => {
-  if (!confirm('Fortschritt wirklich zurücksetzen?')) return;
-  state.stats = {}; state.current = null; save();
-  show(pickNext());
+function go(n) {
+  if (!byNumber.has(n)) return;
+  state.current = n;
+  show(true);
+  window.scrollTo({ top: 0 });
+}
+const step = d => {
+  const i = idx() + d;
+  if (i >= 0 && i < QUESTIONS.length) go(QUESTIONS[i].number);
 };
 
-// resume the question that was open before reload (if still in pool and unanswered state is lost, that's fine)
-const resume = QUESTIONS.find(q => q.number === state.current);
-show(resume && pool().includes(resume) && !mastered(resume) ? resume : pickNext());
+// --- events ---
+$('prev').onclick = () => step(-1);
+$('next').onclick = () => step(1);
+$('toggle-grid').onclick = () => { $('grid').hidden = !$('grid').hidden; };
+$('jump-form').onsubmit = e => {
+  e.preventDefault();
+  go(+$('jump').value);
+  $('jump').value = '';
+};
+$('speak').onclick = () => speak(QUESTIONS[idx()].question);
+$('auto-speak').checked = state.autoSpeak;
+$('auto-speak').onchange = e => {
+  state.autoSpeak = e.target.checked;
+  save();
+  if (state.autoSpeak) speak(QUESTIONS[idx()].question);
+};
+$('reset').onclick = () => {
+  if (!confirm('Fortschritt wirklich zurücksetzen?')) return;
+  state.answers = {};
+  state.current = QUESTIONS[0].number;
+  show(true);
+};
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'ArrowLeft') step(-1);
+  else if (e.key === 'ArrowRight') step(1);
+  else if (/^[1-4]$/.test(e.key)) $('answers').children[+e.key - 1]?.firstChild.click();
+});
+
+show(false); // no auto speech on load: browsers block it until the first user interaction

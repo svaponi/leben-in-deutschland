@@ -23,3 +23,15 @@ h2 { font-size: 1.15rem; margin: 4px 0 16px; }
 footer { text-align: center; margin-top: 16px; }
 .link { background: none; border: 0; color: #6b7280; text-decoration: underline; cursor: pointer; font-size: .8rem; }
 [hidden] { display: none !important; }
+
+.toolbar { display: flex; gap: 8px; margin: 12px 0; align-items: center; }
+.toolbar button, #jump-form button { padding: 8px 14px; font: inherit; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; cursor: pointer; }
+.toolbar button:hover { border-color: #2563eb; }
+#jump-form { display: flex; gap: 4px; margin: 0 auto; }
+#jump { width: 70px; padding: 8px; font: inherit; border: 1px solid #d1d5db; border-radius: 8px; }
+#grid { margin-bottom: 12px; display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 4px; max-height: 260px; overflow-y: auto; }
+#grid button { padding: 6px 0; font-size: .8rem; background: #e5e7eb; border: 2px solid transparent; border-radius: 6px; cursor: pointer; }
+#grid button.ok { background: #bbf7d0; }
+#grid button.bad { background: #fecaca; }
+#grid button.cur { border-color: #2563eb; }
+.speech { margin-top: 16px; display: flex; justify-content: space-between; align-items: center; font-size: .85rem; color: #4b5563; }
