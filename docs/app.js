@@ -181,6 +181,7 @@ document.addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT') return;
   if (e.key === 'ArrowLeft') step(-1);
   else if (e.key === 'ArrowRight') step(1);
+  else if (e.key === ' ') { e.preventDefault(); setLang(state.lang === 'de' ? 'en' : 'de'); }
   else if (/^[1-4]$/.test(e.key)) $('answers').children[+e.key - 1]?.firstChild.click();
 });
 
@@ -189,14 +190,16 @@ function applyLang() {
   document.querySelectorAll('#lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === state.lang));
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = ui()[el.dataset.i18n]; });
 }
-document.querySelectorAll('#lang button').forEach(b => {
-  b.onclick = () => {
-    state.lang = b.dataset.lang;
-    window.speechSynthesis?.cancel();
-    applyLang();
-    show(false);
-  };
-});
+function setLang(lang) {
+  state.lang = lang;
+  window.speechSynthesis?.cancel();
+  applyLang();
+  show(false);
+}
+document.querySelectorAll('#lang button').forEach(b => { b.onclick = () => setLang(b.dataset.lang); });
 
 applyLang();
+// a focused button would otherwise be clicked when space is released
+document.addEventListener('keyup', e => { if (e.key === ' ' && e.target.tagName !== 'INPUT') e.preventDefault(); });
+
 show(false); // no auto speech on load: browsers block it until the first user interaction
