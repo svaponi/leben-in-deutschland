@@ -10,7 +10,7 @@ section { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 1p
 #qnum { margin: 0; font-size: .8rem; color: #6b7280; }
 .q-row { display: flex; gap: 8px; align-items: flex-start; margin: 4px 0 16px; }
 .q-row h2 { flex: 1; margin: 0; }
-.q-row .say { height: 44px; }
+.q-row .say { height: 32px; }
 h2 { font-size: 1.15rem; }
 #image { display: block; max-width: 100%; max-height: 280px; margin: 0 auto 16px; }
 #answers { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
@@ -45,8 +45,8 @@ footer { text-align: center; margin-top: 16px; }
 #continue { display: block; width: 100%; margin-top: 16px; padding: 12px; font: inherit; font-weight: 600; background: #2563eb; color: #fff; border: 0; border-radius: 8px; cursor: pointer; }
 #continue:hover { background: #1d4ed8; }
 #answers .ans { flex: 1; }
-.say { flex: none; width: 44px; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; cursor: pointer; font-size: 1rem; }
-.say:hover { border-color: #2563eb; }
+.say { flex: none; width: 32px; background: none; border: 0; border-radius: 6px; cursor: pointer; font-size: .85rem; opacity: .35; transition: opacity .15s, background .15s; }
+.say:hover, .say:focus-visible { opacity: 1; background: #f3f4f6; }
 .title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
 .title-row h1 { margin: 0; }
 #lang { font-size: .9rem; color: #9ca3af; }
