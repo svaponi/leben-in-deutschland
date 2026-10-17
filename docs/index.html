@@ -23,11 +23,6 @@
     <button id="next" title="Nächste (→)">→</button>
   </nav>
 
-  <div id="retry-bar" hidden>
-    <span id="retry-info"></span>
-    <button id="retry" class="link"></button>
-  </div>
-
   <section id="grid" hidden></section>
 
   <section id="card">
@@ -45,7 +40,13 @@
     </div>
   </section>
 
-  <footer><button id="reset" class="link" data-i18n="reset">Fortschritt zurücksetzen</button></footer>
+  <footer>
+    <div id="retry-bar" hidden>
+      <span id="retry-info"></span>
+      <button id="retry" class="link"></button>
+    </div>
+    <button id="reset" class="link" data-i18n="reset">Fortschritt zurücksetzen</button>
+  </footer>
 </main>
 <script src="questions.js"></script>
 <script src="translations-en.js"></script>
