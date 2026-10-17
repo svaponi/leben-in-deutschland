@@ -1,0 +1,2114 @@
+[
+  {
+    "number": 301,
+    "question": "Welches Wappen gehört zum Bundesland Baden-Württemberg?",
+    "image": "/assets/301-baden-wuerttemberg-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Das Wappen von Baden-Württemberg zeigt drei schwarze Löwen auf goldenem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "bw"
+  },
+  {
+    "number": 302,
+    "question": "Welches ist ein Landkreis in Baden-Württemberg?",
+    "answers": [
+      "Mecklenburgische Seenplatte",
+      "Neckar-Odenwald-Kreis",
+      "Nordfriesland",
+      "Altötting"
+    ],
+    "correct": 1,
+    "explanation": "Der Neckar-Odenwald-Kreis liegt im Norden des Landes. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "bw"
+  },
+  {
+    "number": 303,
+    "question": "Für wie viele Jahre wird der Landtag in Baden-Württemberg gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Baden-Württemberg wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "bw"
+  },
+  {
+    "number": 304,
+    "question": "Ab welchem Alter darf man in Baden-Württemberg bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Baden-Württemberg darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "bw"
+  },
+  {
+    "number": 305,
+    "question": "Welche Farben hat die Landesflagge von Baden-Württemberg?",
+    "answers": [
+      "blau-weiß-rot",
+      "schwarz-gold",
+      "weiß-blau",
+      "grün-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Baden-Württemberg ist schwarz-gold. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "bw"
+  },
+  {
+    "number": 306,
+    "question": "Wo können Sie sich in Baden-Württemberg über politische Themen informieren?",
+    "answers": [
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Verbraucherzentrale",
+      "bei der Landeszentrale für politische Bildung",
+      "bei den Kirchen"
+    ],
+    "correct": 2,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Baden-Württemberg kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "bw"
+  },
+  {
+    "number": 307,
+    "question": "Die Landeshauptstadt von Baden-Württemberg heißt ...",
+    "answers": [
+      "Heidelberg.",
+      "Stuttgart.",
+      "Karlsruhe.",
+      "Mannheim."
+    ],
+    "correct": 1,
+    "explanation": "Die Landeshauptstadt von Baden-Württemberg ist Stuttgart. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "bw"
+  },
+  {
+    "number": 308,
+    "question": "Welches Bundesland ist Baden-Württemberg?",
+    "image": "/assets/308-baden-wuerttemberg-welches-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Baden-Württemberg liegt im Südwesten Deutschlands und grenzt an Frankreich und die Schweiz. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "bw"
+  },
+  {
+    "number": 309,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Baden-Württemberg?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Baden-Württemberg heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "bw"
+  },
+  {
+    "number": 310,
+    "question": "Welchen Minister / welche Ministerin hat Baden-Württemberg nicht?",
+    "answers": [
+      "Finanzminister / Finanzministerin",
+      "Justizminister / Justizministerin",
+      "Innenminister / Innenministerin",
+      "Außenminister / Außenministerin"
+    ],
+    "correct": 3,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "bw"
+  },
+  {
+    "number": 311,
+    "question": "Welches Wappen gehört zum Freistaat Bayern?",
+    "image": "/assets/311-bayern-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Das Wappen von Bayern zeigt die weiß-blauen Rauten mit dem goldenen Löwen. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "by"
+  },
+  {
+    "number": 312,
+    "question": "Welches ist ein Landkreis in Bayern?",
+    "answers": [
+      "Prignitz",
+      "Rhein-Sieg-Kreis",
+      "Nordfriesland",
+      "Altötting"
+    ],
+    "correct": 3,
+    "explanation": "Altötting liegt im Südosten Bayerns und ist als Wallfahrtsort bekannt. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "by"
+  },
+  {
+    "number": 313,
+    "question": "Für wie viele Jahre wird der Landtag in Bayern gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Bayern wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "by"
+  },
+  {
+    "number": 314,
+    "question": "Ab welchem Alter darf man in Bayern bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "In Bayern liegt das Wahlalter bei Kommunalwahlen bei 18 Jahren. Einige andere Bundesländer erlauben die Teilnahme schon ab 16 Jahren.",
+    "state": "by"
+  },
+  {
+    "number": 315,
+    "question": "Welche Farben hat die Landesflagge von Bayern?",
+    "answers": [
+      "blau-weiß-rot",
+      "weiß-blau",
+      "grün-weiß-rot",
+      "schwarz-gelb"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Bayern ist weiß-blau. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "by"
+  },
+  {
+    "number": 316,
+    "question": "Wo können Sie sich in Bayern über politische Themen informieren?",
+    "answers": [
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Landeszentrale für politische Bildung",
+      "bei der Verbraucherzentrale",
+      "bei den Kirchen"
+    ],
+    "correct": 1,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Bayern kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "by"
+  },
+  {
+    "number": 317,
+    "question": "Die Landeshauptstadt von Bayern heißt ...",
+    "answers": [
+      "Ingolstadt.",
+      "Regensburg.",
+      "Nürnberg.",
+      "München."
+    ],
+    "correct": 3,
+    "explanation": "Die Landeshauptstadt von Bayern ist München. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "by"
+  },
+  {
+    "number": 318,
+    "question": "Welches Bundesland ist Bayern?",
+    "image": "/assets/318-bayern-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Bayern ist das flächengrößte Bundesland und liegt im Südosten Deutschlands. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "by"
+  },
+  {
+    "number": 319,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Bayern?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Bayern heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "by"
+  },
+  {
+    "number": 320,
+    "question": "Welchen Minister / welche Ministerin hat Bayern nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "by"
+  },
+  {
+    "number": 321,
+    "question": "Welches Wappen gehört zum Bundesland Berlin?",
+    "image": "/assets/321-berlin-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Das Wappen von Berlin zeigt den schwarzen Berliner Bären auf weißem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "be"
+  },
+  {
+    "number": 322,
+    "question": "Welches ist ein Bezirk von Berlin?",
+    "answers": [
+      "Altona",
+      "Prignitz",
+      "Pankow",
+      "Mecklenburgische Seenplatte"
+    ],
+    "correct": 2,
+    "explanation": "Pankow ist einer der zwölf Bezirke Berlins. Die anderen Antworten nennen Gebiete aus anderen Bundesländern.",
+    "state": "be"
+  },
+  {
+    "number": 323,
+    "question": "Für wie viele Jahre wird das Landesparlament in Berlin gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Das Landesparlament (Abgeordnetenhaus) in Berlin wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "be"
+  },
+  {
+    "number": 324,
+    "question": "Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Berlin darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "be"
+  },
+  {
+    "number": 325,
+    "question": "Welche Farben hat die Landesflagge von Berlin?",
+    "answers": [
+      "blau-weiß-rot",
+      "weiß-rot",
+      "grün-weiß-rot",
+      "schwarz-gold"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Berlin ist weiß-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "be"
+  },
+  {
+    "number": 326,
+    "question": "Wo können Sie sich in Berlin über politische Themen informieren?",
+    "answers": [
+      "beim Ordnungsamt der Gemeinde",
+      "bei den Kirchen",
+      "bei der Verbraucherzentrale",
+      "bei der Landeszentrale für politische Bildung"
+    ],
+    "correct": 3,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Berlin kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "be"
+  },
+  {
+    "number": 327,
+    "question": "Welches Bundesland ist ein Stadtstaat?",
+    "answers": [
+      "Berlin",
+      "Saarland",
+      "Brandenburg",
+      "Hessen"
+    ],
+    "correct": 0,
+    "explanation": "Berlin ist ein Stadtstaat, also gleichzeitig Stadt und Bundesland. Die drei deutschen Stadtstaaten sind Berlin, Hamburg und Bremen.",
+    "state": "be"
+  },
+  {
+    "number": 328,
+    "question": "Welches Bundesland ist Berlin?",
+    "image": "/assets/328-welches-bundesland-berlin.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Berlin ist die Hauptstadt Deutschlands und liegt als Stadtstaat vollständig im Land Brandenburg. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "be"
+  },
+  {
+    "number": 329,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Berlin?",
+    "answers": [
+      "Ministerpräsident / Ministerpräsidentin",
+      "Oberbürgermeister / Oberbürgermeisterin",
+      "Präsident / Präsidentin des Senats",
+      "Regierender Bürgermeister / Regierende Bürgermeisterin"
+    ],
+    "correct": 3,
+    "explanation": "In Berlin heißt der Regierungschef oder die Regierungschefin Regierender Bürgermeister / Regierende Bürgermeisterin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "be"
+  },
+  {
+    "number": 330,
+    "question": "Welchen Senator / welche Senatorin hat Berlin nicht?",
+    "answers": [
+      "Finanzsenator / Finanzsenatorin",
+      "Innensenator / Innensenatorin",
+      "Senator / Senatorin für Außenbeziehungen",
+      "Justizsenator / Justizsenatorin"
+    ],
+    "correct": 2,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Senatorinnen und Senatoren für Finanzen, Inneres und Justiz.",
+    "state": "be"
+  },
+  {
+    "number": 331,
+    "question": "Welches Wappen gehört zum Bundesland Brandenburg?",
+    "image": "/assets/331-brandenburg-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Das Wappen von Brandenburg zeigt den roten Adler auf weißem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "bb"
+  },
+  {
+    "number": 332,
+    "question": "Welches ist ein Landkreis in Brandenburg?",
+    "answers": [
+      "Prignitz",
+      "Rhein-Sieg-Kreis",
+      "Vogtlandkreis",
+      "Amberg-Sulzbach"
+    ],
+    "correct": 0,
+    "explanation": "Die Prignitz liegt im Nordwesten Brandenburgs. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "bb"
+  },
+  {
+    "number": 333,
+    "question": "Für wie viele Jahre wird der Landtag in Brandenburg gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Brandenburg wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "bb"
+  },
+  {
+    "number": 334,
+    "question": "Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "18",
+      "16",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "In Brandenburg darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "bb"
+  },
+  {
+    "number": 335,
+    "question": "Welche Farben hat die Landesflagge von Brandenburg?",
+    "answers": [
+      "blau-weiß-rot",
+      "rot-weiß",
+      "grün-weiß-rot",
+      "schwarz-gelb"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Brandenburg ist rot-weiß. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "bb"
+  },
+  {
+    "number": 336,
+    "question": "Wo können Sie sich in Brandenburg über politische Themen informieren?",
+    "answers": [
+      "bei den Kirchen",
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Landeszentrale für politische Bildung",
+      "bei der Verbraucherzentrale"
+    ],
+    "correct": 2,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Brandenburg kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "bb"
+  },
+  {
+    "number": 337,
+    "question": "Die Landeshauptstadt von Brandenburg heißt ...",
+    "answers": [
+      "Potsdam.",
+      "Cottbus.",
+      "Brandenburg.",
+      "Frankfurt/Oder."
+    ],
+    "correct": 0,
+    "explanation": "Die Landeshauptstadt von Brandenburg ist Potsdam. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "bb"
+  },
+  {
+    "number": 338,
+    "question": "Welches Bundesland ist Brandenburg?",
+    "image": "/assets/338-brandenburg-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Brandenburg umschließt die Hauptstadt Berlin vollständig und liegt im Nordosten Deutschlands. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "bb"
+  },
+  {
+    "number": 339,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Brandenburg?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Brandenburg heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "bb"
+  },
+  {
+    "number": 340,
+    "question": "Welchen Minister / welche Ministerin hat Brandenburg nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "bb"
+  },
+  {
+    "number": 341,
+    "question": "Welches Wappen gehört zur Freien Hansestadt Bremen?",
+    "image": "/assets/341-bremen-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Das Wappen von Bremen zeigt den silbernen Schlüssel auf rotem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "hb"
+  },
+  {
+    "number": 342,
+    "question": "Welches ist ein Stadtteil von Bremen?",
+    "answers": [
+      "Altona",
+      "Hemelingen",
+      "Pankow",
+      "Babelsberg"
+    ],
+    "correct": 1,
+    "explanation": "Hemelingen ist einer der Stadtteile von Bremen. Die anderen Antworten nennen Gebiete aus anderen Bundesländern.",
+    "state": "hb"
+  },
+  {
+    "number": 343,
+    "question": "Für wie viele Jahre wird das Landesparlament in Bremen gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "Das Landesparlament (Bürgerschaft) in Bremen wird für vier Jahre gewählt. Das ist eine Ausnahme, in den meisten Bundesländern sind es fünf Jahre.",
+    "state": "hb"
+  },
+  {
+    "number": 344,
+    "question": "Ab welchem Alter darf man in Bremen bei den Wahlen zur Bürgerschaft (Landtag) wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Bremen darf man bei den Wahlen zur Bürgerschaft bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "hb"
+  },
+  {
+    "number": 345,
+    "question": "Welche Farben hat die Landesflagge von Bremen?",
+    "answers": [
+      "blau-weiß-rot",
+      "rot-weiß",
+      "grün-weiß-rot",
+      "schwarz-gold"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Bremen ist rot-weiß. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "hb"
+  },
+  {
+    "number": 346,
+    "question": "Wo können Sie sich in Bremen über politische Themen informieren?",
+    "answers": [
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Landeszentrale für politische Bildung",
+      "bei den Kirchen",
+      "bei der Verbraucherzentrale"
+    ],
+    "correct": 1,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Bremen kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "hb"
+  },
+  {
+    "number": 347,
+    "question": "Was ist ein deutscher Stadtstaat?",
+    "answers": [
+      "Bremen",
+      "München",
+      "Frankfurt",
+      "Erfurt"
+    ],
+    "correct": 0,
+    "explanation": "Bremen ist ein Stadtstaat, also gleichzeitig Stadt und Bundesland. Die drei deutschen Stadtstaaten sind Berlin, Hamburg und Bremen.",
+    "state": "hb"
+  },
+  {
+    "number": 348,
+    "question": "Welches Bundesland ist Bremen?",
+    "image": "/assets/348-bremen-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Bremen ist mit den beiden Städten Bremen und Bremerhaven das kleinste Bundesland. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "hb"
+  },
+  {
+    "number": 349,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Bremen?",
+    "answers": [
+      "Ministerpräsident / Ministerpräsidentin",
+      "Erster Bürgermeister / Erste Bürgermeisterin",
+      "Präsident / Präsidentin des Senats",
+      "Regierender Bürgermeister / Regierende Bürgermeisterin"
+    ],
+    "correct": 2,
+    "explanation": "In Bremen heißt der Regierungschef oder die Regierungschefin Präsident / Präsidentin des Senats. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "hb"
+  },
+  {
+    "number": 350,
+    "question": "Welchen Senator / welche Senatorin hat Bremen nicht?",
+    "answers": [
+      "Senator / Senatorin für Außenbeziehungen",
+      "Finanzsenator / Finanzsenatorin",
+      "Justizsenator / Justizsenatorin",
+      "Innensenator / Innensenatorin"
+    ],
+    "correct": 0,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Senatorinnen und Senatoren für Finanzen, Inneres und Justiz.",
+    "state": "hb"
+  },
+  {
+    "number": 351,
+    "question": "Welches Wappen gehört zur Freien und Hansestadt Hamburg?",
+    "image": "/assets/351-hamburg-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Das Wappen von Hamburg zeigt die weiße Burg mit drei Türmen auf rotem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "hh"
+  },
+  {
+    "number": 352,
+    "question": "Welches ist ein Bezirk von Hamburg?",
+    "answers": [
+      "Altona",
+      "Hemelingen",
+      "Pankow",
+      "Mecklenburgische Seenplatte"
+    ],
+    "correct": 0,
+    "explanation": "Altona ist einer der sieben Bezirke Hamburgs. Die anderen Antworten nennen Gebiete aus anderen Bundesländern.",
+    "state": "hh"
+  },
+  {
+    "number": 353,
+    "question": "Für wie viele Jahre wird das Landesparlament in Hamburg gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Das Landesparlament (Bürgerschaft) in Hamburg wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "hh"
+  },
+  {
+    "number": 354,
+    "question": "Ab welchem Alter darf man in Hamburg bei Kommunalwahlen (Wahl der Bezirksversammlungen) wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Hamburg darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "hh"
+  },
+  {
+    "number": 355,
+    "question": "Welche Farben hat die Landesflagge von Hamburg?",
+    "answers": [
+      "blau-weiß-rot",
+      "weiß-rot",
+      "grün-weiß-rot",
+      "schwarz-gelb"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Hamburg ist weiß-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "hh"
+  },
+  {
+    "number": 356,
+    "question": "Wo können Sie sich in Hamburg über politische Themen informieren?",
+    "answers": [
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Verbraucherzentrale",
+      "bei den Kirchen",
+      "bei der Landeszentrale für politische Bildung"
+    ],
+    "correct": 3,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Hamburg kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "hh"
+  },
+  {
+    "number": 357,
+    "question": "Welches Bundesland ist ein Stadtstaat?",
+    "answers": [
+      "Hamburg",
+      "Sachsen",
+      "Bayern",
+      "Thüringen"
+    ],
+    "correct": 0,
+    "explanation": "Hamburg ist ein Stadtstaat, also gleichzeitig Stadt und Bundesland. Die drei deutschen Stadtstaaten sind Berlin, Hamburg und Bremen.",
+    "state": "hh"
+  },
+  {
+    "number": 358,
+    "question": "Welches Bundesland ist Hamburg?",
+    "image": "/assets/358-hamburg-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Hamburg ist als Stadtstaat die zweitgrößte Stadt Deutschlands und liegt an der Elbe. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "hh"
+  },
+  {
+    "number": 359,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Hamburg?",
+    "answers": [
+      "Ministerpräsident / Ministerpräsidentin",
+      "Erster Bürgermeister / Erste Bürgermeisterin",
+      "Regierender Senator / Regierende Senatorin",
+      "Oberbürgermeister / Oberbürgermeisterin"
+    ],
+    "correct": 1,
+    "explanation": "In Hamburg heißt der Regierungschef oder die Regierungschefin Erster Bürgermeister / Erste Bürgermeisterin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "hh"
+  },
+  {
+    "number": 360,
+    "question": "Welchen Senator / welche Senatorin hat Hamburg nicht?",
+    "answers": [
+      "Justizsenator / Justizsenatorin",
+      "Senator / Senatorin für Außenbeziehungen",
+      "Finanzsenator / Finanzsenatorin",
+      "Innensenator / Innensenatorin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Senatorinnen und Senatoren für Finanzen, Inneres und Justiz.",
+    "state": "hh"
+  },
+  {
+    "number": 361,
+    "question": "Welches Wappen gehört zum Bundesland Hessen?",
+    "image": "/assets/361-hessen-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Das Wappen von Hessen zeigt den rot-weiß gestreiften Löwen. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "he"
+  },
+  {
+    "number": 362,
+    "question": "Welches ist ein Landkreis in Hessen?",
+    "answers": [
+      "Ammerland",
+      "Altötting",
+      "Prignitz",
+      "Main-Taunus-Kreis"
+    ],
+    "correct": 3,
+    "explanation": "Der Main-Taunus-Kreis liegt westlich von Frankfurt am Main. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "he"
+  },
+  {
+    "number": 363,
+    "question": "Für wie viele Jahre wird der Landtag in Hessen gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Hessen wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "he"
+  },
+  {
+    "number": 364,
+    "question": "Ab welchem Alter darf man in Hessen bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "In Hessen liegt das Wahlalter bei Kommunalwahlen bei 18 Jahren. Einige andere Bundesländer erlauben die Teilnahme schon ab 16 Jahren.",
+    "state": "he"
+  },
+  {
+    "number": 365,
+    "question": "Welche Farben hat die Landesflagge von Hessen?",
+    "answers": [
+      "blau-weiß-rot",
+      "rot-weiß",
+      "schwarz-gold",
+      "grün-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Hessen ist rot-weiß. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "he"
+  },
+  {
+    "number": 366,
+    "question": "Wo können Sie sich in Hessen über politische Themen informieren?",
+    "answers": [
+      "bei der Landeszentrale für politische Bildung",
+      "bei der Verbraucherzentrale",
+      "beim Ordnungsamt der Gemeinde",
+      "bei den Kirchen"
+    ],
+    "correct": 0,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Hessen kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "he"
+  },
+  {
+    "number": 367,
+    "question": "Die Landeshauptstadt von Hessen heißt ...",
+    "answers": [
+      "Kassel",
+      "Darmstadt",
+      "Frankfurt",
+      "Wiesbaden"
+    ],
+    "correct": 3,
+    "explanation": "Die Landeshauptstadt von Hessen ist Wiesbaden. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "he"
+  },
+  {
+    "number": 368,
+    "question": "Welches Bundesland ist Hessen?",
+    "image": "/assets/368-hessen-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Hessen liegt in der Mitte Deutschlands, größte Stadt ist Frankfurt am Main. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "he"
+  },
+  {
+    "number": 369,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Hessen?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Hessen heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "he"
+  },
+  {
+    "number": 370,
+    "question": "Welchen Minister / welche Ministerin hat Hessen nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "he"
+  },
+  {
+    "number": 371,
+    "question": "Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern?",
+    "image": "/assets/371-mecklenburg-vorpommern-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Das Wappen von Mecklenburg-Vorpommern zeigt vier Felder mit Stierkopf, Greif und Adlern. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "mv"
+  },
+  {
+    "number": 372,
+    "question": "Welches ist ein Landkreis in Mecklenburg-Vorpommern?",
+    "answers": [
+      "Prignitz",
+      "Mecklenburgische Seenplatte",
+      "Vogtlandkreis",
+      "Rhein-Sieg-Kreis"
+    ],
+    "correct": 1,
+    "explanation": "Die Mecklenburgische Seenplatte ist der flächengrößte Landkreis Deutschlands. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "mv"
+  },
+  {
+    "number": 373,
+    "question": "Für wie viele Jahre wird der Landtag in Mecklenburg-Vorpommern gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Mecklenburg-Vorpommern wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "mv"
+  },
+  {
+    "number": 374,
+    "question": "Ab welchem Alter darf man in Mecklenburg-Vorpommern bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Mecklenburg-Vorpommern darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "mv"
+  },
+  {
+    "number": 375,
+    "question": "Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?",
+    "answers": [
+      "schwarz-rot-gold",
+      "blau-weiß-gelb-rot",
+      "grün-weiß-rot",
+      "schwarz-gelb"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Mecklenburg-Vorpommern ist blau-weiß-gelb-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "mv"
+  },
+  {
+    "number": 376,
+    "question": "Wo können Sie sich in Mecklenburg-Vorpommern über politische Themen informieren?",
+    "answers": [
+      "bei der Landeszentrale für politische Bildung",
+      "bei den Kirchen",
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Verbraucherzentrale"
+    ],
+    "correct": 0,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Mecklenburg-Vorpommern kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "mv"
+  },
+  {
+    "number": 377,
+    "question": "Die Landeshauptstadt von Mecklenburg-Vorpommern heißt ...",
+    "answers": [
+      "Greifswald",
+      "Schwerin",
+      "Rostock",
+      "Wismar"
+    ],
+    "correct": 1,
+    "explanation": "Die Landeshauptstadt von Mecklenburg-Vorpommern ist Schwerin. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "mv"
+  },
+  {
+    "number": 378,
+    "question": "Welches Bundesland ist Mecklenburg-Vorpommern?",
+    "image": "/assets/378-mecklenburg-vorpommern-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Mecklenburg-Vorpommern liegt im Nordosten an der Ostsee und ist bekannt für seine Seen und Küsten. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "mv"
+  },
+  {
+    "number": 379,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Mecklenburg-Vorpommern?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Mecklenburg-Vorpommern heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "mv"
+  },
+  {
+    "number": 380,
+    "question": "Welchen Minister / welche Ministerin hat Mecklenburg-Vorpommern nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "mv"
+  },
+  {
+    "number": 381,
+    "question": "Welches Wappen gehört zum Bundesland Niedersachsen?",
+    "image": "/assets/381-niedersachsen-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Das Wappen von Niedersachsen zeigt das weiße Sachsenross auf rotem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "ni"
+  },
+  {
+    "number": 382,
+    "question": "Welches ist ein Landkreis in Niedersachsen?",
+    "answers": [
+      "Ammerland",
+      "Rhein-Sieg-Kreis",
+      "Nordfriesland",
+      "Vogtlandkreis"
+    ],
+    "correct": 0,
+    "explanation": "Das Ammerland liegt im Nordwesten Niedersachsens bei Oldenburg. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "ni"
+  },
+  {
+    "number": 383,
+    "question": "Für wie viele Jahre wird der Landtag in Niedersachsen gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Niedersachsen wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "ni"
+  },
+  {
+    "number": 384,
+    "question": "Ab welchem Alter darf man in Niedersachsen bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Niedersachsen darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "ni"
+  },
+  {
+    "number": 385,
+    "question": "Welche Farben hat die Landesflagge von Niedersachsen?",
+    "answers": [
+      "weiß-blau",
+      "schwarz-rot-gold",
+      "schwarz-gelb",
+      "blau-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Niedersachsen ist schwarz-rot-gold. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "ni"
+  },
+  {
+    "number": 386,
+    "question": "Wo können Sie sich in Niedersachsen über politische Themen informieren?",
+    "answers": [
+      "bei der Landeszentrale für politische Bildung",
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Verbraucherzentrale",
+      "bei den Kirchen"
+    ],
+    "correct": 0,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Niedersachsen kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "ni"
+  },
+  {
+    "number": 387,
+    "question": "Die Landeshauptstadt von Niedersachsen heißt …",
+    "answers": [
+      "Hannover",
+      "Braunschweig",
+      "Wolfsburg",
+      "Osnabrück"
+    ],
+    "correct": 0,
+    "explanation": "Die Landeshauptstadt von Niedersachsen ist Hannover. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "ni"
+  },
+  {
+    "number": 388,
+    "question": "Welches Bundesland ist Niedersachsen?",
+    "image": "/assets/388-niedersachsen-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Niedersachsen ist das flächenmäßig zweitgrößte Bundesland und reicht bis an die Nordsee. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "ni"
+  },
+  {
+    "number": 389,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Niedersachsen?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Niedersachsen heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "ni"
+  },
+  {
+    "number": 390,
+    "question": "Welchen Minister / welche Ministerin hat Niedersachsen nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "ni"
+  },
+  {
+    "number": 391,
+    "question": "Welches Wappen gehört zum Bundesland Nordrhein-Westfalen?",
+    "image": "/assets/391-nordrhein-westfalen-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Das Wappen von Nordrhein-Westfalen zeigt den Rhein, das Westfalenross und die Lippische Rose. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "nw"
+  },
+  {
+    "number": 392,
+    "question": "Welches ist ein Landkreis in Nordrhein-Westfalen?",
+    "answers": [
+      "Ammerland",
+      "Rhein-Sieg-Kreis",
+      "Nordfriesland",
+      "Vogtlandkreis"
+    ],
+    "correct": 1,
+    "explanation": "Der Rhein-Sieg-Kreis liegt südlich von Bonn. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "nw"
+  },
+  {
+    "number": 393,
+    "question": "Für wie viele Jahre wird der Landtag in Nordrhein-Westfalen gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Nordrhein-Westfalen wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "nw"
+  },
+  {
+    "number": 394,
+    "question": "Ab welchem Alter darf man in Nordrhein-Westfalen bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Nordrhein-Westfalen darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "nw"
+  },
+  {
+    "number": 395,
+    "question": "Welche Farben hat die Landesflagge von Nordrhein-Westfalen?",
+    "answers": [
+      "rot-weiß",
+      "grün-weiß-rot",
+      "schwarz-gold",
+      "blau-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Nordrhein-Westfalen ist grün-weiß-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "nw"
+  },
+  {
+    "number": 396,
+    "question": "Wo können Sie sich in Nordrhein-Westfalen über politische Themen informieren?",
+    "answers": [
+      "bei den Kirchen",
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Verbraucherzentrale",
+      "bei der Landeszentrale für politische Bildung"
+    ],
+    "correct": 3,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Nordrhein-Westfalen kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "nw"
+  },
+  {
+    "number": 397,
+    "question": "Die Landeshauptstadt von Nordrhein-Westfalen heißt …",
+    "answers": [
+      "Köln",
+      "Bonn",
+      "Düsseldorf",
+      "Dortmund"
+    ],
+    "correct": 2,
+    "explanation": "Die Landeshauptstadt von Nordrhein-Westfalen ist Düsseldorf. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "nw"
+  },
+  {
+    "number": 398,
+    "question": "Welches Bundesland ist Nordrhein-Westfalen?",
+    "image": "/assets/398-nordrhein-westfalen-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Nordrhein-Westfalen ist mit rund 18 Millionen Menschen das bevölkerungsreichste Bundesland. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "nw"
+  },
+  {
+    "number": 399,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Nordrhein-Westfalen?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Nordrhein-Westfalen heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "nw"
+  },
+  {
+    "number": 400,
+    "question": "Welchen Minister / welche Ministerin hat Nordrhein-Westfalen nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "nw"
+  },
+  {
+    "number": 401,
+    "question": "Welches Wappen gehört zum Bundesland Rheinland-Pfalz?",
+    "image": "/assets/401-rheinland-pfalz-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Das Wappen von Rheinland-Pfalz zeigt das Trierer Kreuz, das Mainzer Rad und den Pfälzer Löwen. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "rp"
+  },
+  {
+    "number": 402,
+    "question": "Welches ist ein Landkreis in Rheinland-Pfalz?",
+    "answers": [
+      "Westerwaldkreis",
+      "Altötting",
+      "Emsland",
+      "Prignitz"
+    ],
+    "correct": 0,
+    "explanation": "Der Westerwaldkreis liegt im Norden von Rheinland-Pfalz. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "rp"
+  },
+  {
+    "number": 403,
+    "question": "Für wie viele Jahre wird der Landtag in Rheinland-Pfalz gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Rheinland-Pfalz wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "rp"
+  },
+  {
+    "number": 404,
+    "question": "Ab welchem Alter darf man in Rheinland-Pfalz bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "In Rheinland-Pfalz liegt das Wahlalter bei Kommunalwahlen bei 18 Jahren. Einige andere Bundesländer erlauben die Teilnahme schon ab 16 Jahren.",
+    "state": "rp"
+  },
+  {
+    "number": 405,
+    "question": "Welche Farben hat die Landesflagge von Rheinland-Pfalz?",
+    "answers": [
+      "weiß-rot",
+      "schwarz-rot-gold",
+      "schwarz-gelb",
+      "grün-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Rheinland-Pfalz ist schwarz-rot-gold. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "rp"
+  },
+  {
+    "number": 406,
+    "question": "Wo können Sie sich in Rheinland-Pfalz über politische Themen informieren?",
+    "answers": [
+      "bei den Kirchen",
+      "bei der Verbraucherzentrale",
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Landeszentrale für politische Bildung"
+    ],
+    "correct": 3,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Rheinland-Pfalz kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "rp"
+  },
+  {
+    "number": 407,
+    "question": "Die Landeshauptstadt von Rheinland-Pfalz heißt …",
+    "answers": [
+      "Mainz",
+      "Kaiserslautern",
+      "Ludwigshafen",
+      "Koblenz"
+    ],
+    "correct": 0,
+    "explanation": "Die Landeshauptstadt von Rheinland-Pfalz ist Mainz. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "rp"
+  },
+  {
+    "number": 408,
+    "question": "Welches Bundesland ist Rheinland-Pfalz?",
+    "image": "/assets/408-rheinland-pfalz-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Rheinland-Pfalz liegt im Westen Deutschlands und grenzt an Frankreich, Luxemburg und Belgien. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "rp"
+  },
+  {
+    "number": 409,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Rheinland-Pfalz?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Rheinland-Pfalz heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "rp"
+  },
+  {
+    "number": 410,
+    "question": "Welchen Minister / welche Ministerin hat Rheinland-Pfalz nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "rp"
+  },
+  {
+    "number": 411,
+    "question": "Welches Wappen gehört zum Bundesland Saarland?",
+    "image": "/assets/411-saarland-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Das Wappen des Saarlandes zeigt vier Felder, die auf die historischen Territorien des Landes verweisen. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "sl"
+  },
+  {
+    "number": 412,
+    "question": "Welches ist ein Landkreis im Saarland?",
+    "answers": [
+      "Mecklenburgische Seenplatte",
+      "Altötting",
+      "Neunkirchen",
+      "Rhein-Sieg-Kreis"
+    ],
+    "correct": 2,
+    "explanation": "Neunkirchen ist einer von sechs Landkreisen im Saarland. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "sl"
+  },
+  {
+    "number": 413,
+    "question": "Für wie viele Jahre wird der Landtag des Saarlandes gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag im Saarland wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "sl"
+  },
+  {
+    "number": 414,
+    "question": "Ab welchem Alter darf man im Saarland bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "Im Saarland liegt das Wahlalter bei Kommunalwahlen bei 18 Jahren. Einige andere Bundesländer erlauben die Teilnahme schon ab 16 Jahren.",
+    "state": "sl"
+  },
+  {
+    "number": 415,
+    "question": "Welche Farben hat die Landesflagge des Saarlandes?",
+    "answers": [
+      "weiß-blau",
+      "schwarz-rot-gold",
+      "schwarz-gelb",
+      "grün-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge des Saarlandes ist schwarz-rot-gold. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "sl"
+  },
+  {
+    "number": 416,
+    "question": "Wo können Sie sich im Saarland über politische Themen informieren?",
+    "answers": [
+      "bei den Kirchen",
+      "bei der Landeszentrale für politische Bildung",
+      "bei der Verbraucherzentrale",
+      "beim Ordnungsamt der Gemeinde"
+    ],
+    "correct": 1,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet im Saarland kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "sl"
+  },
+  {
+    "number": 417,
+    "question": "Die Landeshauptstadt des Saarlandes heißt …",
+    "answers": [
+      "Neunkirchen",
+      "Homburg",
+      "Saarbrücken",
+      "Völklingen"
+    ],
+    "correct": 2,
+    "explanation": "Die Landeshauptstadt des Saarlandes ist Saarbrücken. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "sl"
+  },
+  {
+    "number": 418,
+    "question": "Welches Bundesland ist das Saarland?",
+    "image": "/assets/418-saarland-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Saarland ist das kleinste Flächenland und grenzt an Frankreich und Luxemburg. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "sl"
+  },
+  {
+    "number": 419,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin des Saarlandes?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "Im Saarland heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "sl"
+  },
+  {
+    "number": 420,
+    "question": "Welchen Minister / welche Ministerin hat das Saarland nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "sl"
+  },
+  {
+    "number": 421,
+    "question": "Welches Wappen gehört zum Freistaat Sachsen?",
+    "image": "/assets/421-sachsen-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Das Wappen von Sachsen zeigt schwarz-goldene Balken mit einem grünen Rautenkranz. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "sn"
+  },
+  {
+    "number": 422,
+    "question": "Welches ist ein Landkreis in Sachsen?",
+    "answers": [
+      "Vogtlandkreis",
+      "Altötting",
+      "Uckermark",
+      "Nordfriesland"
+    ],
+    "correct": 0,
+    "explanation": "Der Vogtlandkreis liegt im Südwesten Sachsens. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "sn"
+  },
+  {
+    "number": 423,
+    "question": "Für wie viele Jahre wird der Landtag in Sachsen gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Sachsen wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "sn"
+  },
+  {
+    "number": 424,
+    "question": "Ab welchem Alter darf man in Sachsen bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "In Sachsen liegt das Wahlalter bei Kommunalwahlen bei 18 Jahren. Einige andere Bundesländer erlauben die Teilnahme schon ab 16 Jahren.",
+    "state": "sn"
+  },
+  {
+    "number": 425,
+    "question": "Welche Farben hat die Landesflagge von Sachsen?",
+    "answers": [
+      "blau-weiß-rot",
+      "weiß-grün",
+      "grün-weiß-rot",
+      "schwarz-gelb"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Sachsen ist weiß-grün. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "sn"
+  },
+  {
+    "number": 426,
+    "question": "Wo können Sie sich in Sachsen über politische Themen informieren?",
+    "answers": [
+      "bei der Landeszentrale für politische Bildung",
+      "beim Ordnungsamt der Gemeinde",
+      "bei den Kirchen",
+      "bei der Verbraucherzentrale"
+    ],
+    "correct": 0,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Sachsen kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "sn"
+  },
+  {
+    "number": 427,
+    "question": "Die Landeshauptstadt von Sachsen heißt …",
+    "answers": [
+      "Leipzig",
+      "Dresden",
+      "Chemnitz",
+      "Zwickau"
+    ],
+    "correct": 1,
+    "explanation": "Die Landeshauptstadt von Sachsen ist Dresden. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "sn"
+  },
+  {
+    "number": 428,
+    "question": "Welches Bundesland ist Sachsen?",
+    "image": "/assets/428-sachsen-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Sachsen liegt im Osten Deutschlands und grenzt an Polen und Tschechien. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "sn"
+  },
+  {
+    "number": 429,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Sachsen?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Sachsen heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "sn"
+  },
+  {
+    "number": 430,
+    "question": "Welchen Minister / welche Ministerin hat Sachsen nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "sn"
+  },
+  {
+    "number": 431,
+    "question": "Welches Wappen gehört zum Bundesland Sachsen-Anhalt?",
+    "image": "/assets/431-sachsen-anhalt-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Das Wappen von Sachsen-Anhalt zeigt die sächsischen Kurschwerter und den roten Bären. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "st"
+  },
+  {
+    "number": 432,
+    "question": "Welches ist ein Landkreis in Sachsen-Anhalt?",
+    "answers": [
+      "Ammerland",
+      "Altötting",
+      "Uckermark",
+      "Börde"
+    ],
+    "correct": 3,
+    "explanation": "Die Börde liegt westlich von Magdeburg und ist für ihre fruchtbaren Böden bekannt. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "st"
+  },
+  {
+    "number": 433,
+    "question": "Für wie viele Jahre wird der Landtag in Sachsen-Anhalt gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Sachsen-Anhalt wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "st"
+  },
+  {
+    "number": 434,
+    "question": "Ab welchem Alter darf man in Sachsen-Anhalt bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Sachsen-Anhalt darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "st"
+  },
+  {
+    "number": 435,
+    "question": "Welche Farben hat die Landesflagge von Sachsen-Anhalt?",
+    "answers": [
+      "blau-weiß-rot",
+      "gelb-schwarz",
+      "grün-weiß-rot",
+      "weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Sachsen-Anhalt ist gelb-schwarz. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "st"
+  },
+  {
+    "number": 436,
+    "question": "Wo können Sie sich in Sachsen-Anhalt über politische Themen informieren?",
+    "answers": [
+      "bei den Kirchen",
+      "bei der Landeszentrale für politische Bildung",
+      "beim Ordnungsamt der Gemeinde",
+      "bei der Verbraucherzentrale"
+    ],
+    "correct": 1,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Sachsen-Anhalt kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "st"
+  },
+  {
+    "number": 437,
+    "question": "Die Landeshauptstadt von Sachsen-Anhalt heißt …",
+    "answers": [
+      "Halle",
+      "Dessau",
+      "Magdeburg",
+      "Wittenberg"
+    ],
+    "correct": 2,
+    "explanation": "Die Landeshauptstadt von Sachsen-Anhalt ist Magdeburg. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "st"
+  },
+  {
+    "number": 438,
+    "question": "Welches Bundesland ist Sachsen-Anhalt?",
+    "image": "/assets/438-sachsen-anhalt-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Sachsen-Anhalt liegt in der Mitte Ostdeutschlands und hat besonders viele UNESCO-Welterbestätten. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "st"
+  },
+  {
+    "number": 439,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Sachsen-Anhalt?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Sachsen-Anhalt heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "st"
+  },
+  {
+    "number": 440,
+    "question": "Welchen Minister / welche Ministerin hat Sachsen-Anhalt nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "st"
+  },
+  {
+    "number": 441,
+    "question": "Welches Wappen gehört zum Bundesland Schleswig-Holstein?",
+    "image": "/assets/441-schleswig-holstein-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Das Wappen von Schleswig-Holstein zeigt zwei blaue Löwen und das rote Nesselblatt. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "sh"
+  },
+  {
+    "number": 442,
+    "question": "Welches ist ein Landkreis in Schleswig-Holstein?",
+    "answers": [
+      "Ammerland",
+      "Mecklenburgische Seenplatte",
+      "Nordfriesland",
+      "Rhein-Sieg-Kreis"
+    ],
+    "correct": 2,
+    "explanation": "Nordfriesland ist der nördlichste Kreis Deutschlands. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "sh"
+  },
+  {
+    "number": 443,
+    "question": "Für wie viele Jahre wird der Landtag in Schleswig-Holstein gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Schleswig-Holstein wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "sh"
+  },
+  {
+    "number": 444,
+    "question": "Ab welchem Alter darf man in Schleswig-Holstein bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Schleswig-Holstein darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "sh"
+  },
+  {
+    "number": 445,
+    "question": "Welche Farben hat die Landesflagge von Schleswig-Holstein?",
+    "answers": [
+      "weiß-blau",
+      "blau-weiß-rot",
+      "weiß-rot",
+      "grün-weiß-rot"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Schleswig-Holstein ist blau-weiß-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "sh"
+  },
+  {
+    "number": 446,
+    "question": "Wo können Sie sich in Schleswig-Holstein über politische Themen informieren?",
+    "answers": [
+      "bei der Verbraucherzentrale",
+      "beim Ordnungsamt der Gemeinde",
+      "bei dem/der Landesbeauftragten für politische Bildung",
+      "bei den Kirchen"
+    ],
+    "correct": 2,
+    "explanation": "In Schleswig-Holstein heißt die zuständige Stelle Landesbeauftragte oder Landesbeauftragter für politische Bildung. Sie informiert kostenlos über Politik, Wahlen und Landeskunde.",
+    "state": "sh"
+  },
+  {
+    "number": 447,
+    "question": "Die Landeshauptstadt von Schleswig-Holstein heißt …",
+    "answers": [
+      "Husum",
+      "Flensburg",
+      "Lübeck",
+      "Kiel"
+    ],
+    "correct": 3,
+    "explanation": "Die Landeshauptstadt von Schleswig-Holstein ist Kiel. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "sh"
+  },
+  {
+    "number": 448,
+    "question": "Welches Bundesland ist Schleswig-Holstein?",
+    "image": "/assets/448-schleswig-holstein-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Schleswig-Holstein ist das nördlichste Bundesland und liegt zwischen Nord- und Ostsee. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "sh"
+  },
+  {
+    "number": 449,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Schleswig-Holstein?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Schleswig-Holstein heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "sh"
+  },
+  {
+    "number": 450,
+    "question": "Welchen Minister / welche Ministerin hat Schleswig-Holstein nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "sh"
+  },
+  {
+    "number": 451,
+    "question": "Welches Wappen gehört zum Freistaat Thüringen?",
+    "image": "/assets/451-thueringen-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Das Wappen von Thüringen zeigt einen silbernen Löwen mit acht Sternen auf rotem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht.",
+    "state": "th"
+  },
+  {
+    "number": 452,
+    "question": "Welches ist ein Landkreis in Thüringen?",
+    "answers": [
+      "Ammerland",
+      "Altötting",
+      "Nordfriesland",
+      "Wartburgkreis"
+    ],
+    "correct": 3,
+    "explanation": "Der Wartburgkreis liegt im Westen Thüringens rund um Eisenach. Die anderen Antworten nennen Landkreise aus anderen Bundesländern.",
+    "state": "th"
+  },
+  {
+    "number": 453,
+    "question": "Für wie viele Jahre wird der Landtag in Thüringen gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Der Landtag in Thüringen wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt.",
+    "state": "th"
+  },
+  {
+    "number": 454,
+    "question": "Ab welchem Alter darf man in Thüringen bei Kommunalwahlen wählen?",
+    "answers": [
+      "14",
+      "18",
+      "16",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "In Thüringen darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest.",
+    "state": "th"
+  },
+  {
+    "number": 455,
+    "question": "Welche Farben hat die Landesflagge von Thüringen?",
+    "answers": [
+      "blau-weiß-rot",
+      "weiß-rot",
+      "grün-weiß-rot",
+      "schwarz-gold"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Thüringen ist weiß-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist.",
+    "state": "th"
+  },
+  {
+    "number": 456,
+    "question": "Wo können Sie sich in Thüringen über politische Themen informieren?",
+    "answers": [
+      "bei den Kirchen",
+      "bei der Verbraucherzentrale",
+      "bei der Landeszentrale für politische Bildung",
+      "beim Ordnungsamt der Gemeinde"
+    ],
+    "correct": 2,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Thüringen kostenlose Broschüren, Veranstaltungen und Materialien an.",
+    "state": "th"
+  },
+  {
+    "number": 457,
+    "question": "Die Landeshauptstadt von Thüringen heißt …",
+    "answers": [
+      "Eisenach.",
+      "Erfurt.",
+      "Gera.",
+      "Jena."
+    ],
+    "correct": 1,
+    "explanation": "Die Landeshauptstadt von Thüringen ist Erfurt. Dort haben Landtag und Landesregierung ihren Sitz.",
+    "state": "th"
+  },
+  {
+    "number": 458,
+    "question": "Welches Bundesland ist Thüringen?",
+    "image": "/assets/458-thueringen-bundesland.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Thüringen liegt in der Mitte Deutschlands und wird auch das grüne Herz Deutschlands genannt. Suchen Sie auf der Karte die passende Form und Lage.",
+    "state": "th"
+  },
+  {
+    "number": 459,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin in Thüringen?",
+    "answers": [
+      "Erster Minister / Erste Ministerin",
+      "Premierminister / Premierministerin",
+      "Bürgermeister / Bürgermeisterin",
+      "Ministerpräsident / Ministerpräsidentin"
+    ],
+    "correct": 3,
+    "explanation": "In Thüringen heißt der Regierungschef oder die Regierungschefin Ministerpräsident / Ministerpräsidentin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten.",
+    "state": "th"
+  },
+  {
+    "number": 460,
+    "question": "Welchen Minister / welche Ministerin hat Thüringen nicht?",
+    "answers": [
+      "Justizminister / Justizministerin",
+      "Außenminister / Außenministerin",
+      "Finanzminister / Finanzministerin",
+      "Innenminister / Innenministerin"
+    ],
+    "correct": 1,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Ministerien für Finanzen, Inneres und Justiz.",
+    "state": "th"
+  }
+]

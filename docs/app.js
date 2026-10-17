@@ -6,6 +6,12 @@ const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpe
   JSON.parse(localStorage.getItem(KEY) || '{}'));
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
+const STATES = {
+  bw: 'Baden-Württemberg', by: 'Bayern', be: 'Berlin', bb: 'Brandenburg', hb: 'Bremen', hh: 'Hamburg',
+  he: 'Hessen', mv: 'Mecklenburg-Vorpommern', ni: 'Niedersachsen', nw: 'Nordrhein-Westfalen',
+  rp: 'Rheinland-Pfalz', sl: 'Saarland', sn: 'Sachsen', st: 'Sachsen-Anhalt',
+  sh: 'Schleswig-Holstein', th: 'Thüringen',
+};
 const byNumber = new Map(QUESTIONS.map((q, i) => [q.number, i]));
 const idx = () => byNumber.get(state.current) ?? 0;
 const isRight = q => state.answers[q.number] === q.correct;
@@ -41,18 +47,28 @@ function renderStats() {
 function renderGrid() {
   const g = $('grid');
   if (!g.children.length) {
+    let region = null;
     QUESTIONS.forEach(q => {
+      if (q.region !== region) {
+        region = q.region;
+        const h = document.createElement('div');
+        h.className = 'grid-heading' + (region === 'de' ? '' : ' state');
+        h.textContent = region === 'de' ? 'Allgemeine Fragen' : STATES[region];
+        g.append(h);
+      }
       const b = document.createElement('button');
       b.textContent = q.number;
       b.dataset.n = q.number;
+      if (region !== 'de') { b.classList.add('state'); b.title = STATES[region]; }
       b.onclick = () => go(q.number);
       g.append(b);
     });
   }
-  for (const b of g.children) {
+  for (const b of g.querySelectorAll('button')) {
     const q = QUESTIONS[byNumber.get(+b.dataset.n)];
-    b.className = (q.number in state.answers ? (isRight(q) ? 'ok' : 'bad') : '') +
-      (q.number === state.current ? ' cur' : '');
+    b.classList.toggle('ok', q.number in state.answers && isRight(q));
+    b.classList.toggle('bad', q.number in state.answers && !isRight(q));
+    b.classList.toggle('cur', q.number === state.current);
   }
 }
 
@@ -74,7 +90,7 @@ function show(userInitiated) {
   state.current = q.number;
   save();
   $('qnum').textContent = `Frage ${q.number} von ${QUESTIONS[QUESTIONS.length - 1].number}` +
-    (q.region === 'be' ? ' · Berlin' : '');
+    (q.region !== 'de' ? ` · ${STATES[q.region]}` : '');
   $('question').textContent = q.question;
   $('image').hidden = !q.image;
   if (q.image) $('image').src = q.image;

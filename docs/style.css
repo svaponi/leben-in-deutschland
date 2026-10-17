@@ -36,3 +36,7 @@ footer { text-align: center; margin-top: 16px; }
 #grid button.bad { background: #fecaca; }
 #grid button.cur { border-color: #2563eb; }
 .speech { margin-top: 16px; display: flex; justify-content: space-between; align-items: center; font-size: .85rem; color: #4b5563; }
+.grid-heading { grid-column: 1 / -1; font-size: .75rem; font-weight: 600; color: #6b7280; margin-top: 6px; }
+.grid-heading.state { color: #7c3aed; border-bottom: 2px solid #c4b5fd; }
+#grid button.state { border-bottom: 3px solid #a78bfa; }
+#grid button.state.cur { border-color: #2563eb; }
