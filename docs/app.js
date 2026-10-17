@@ -50,6 +50,17 @@ function neighbour(d) {
   return i === undefined ? null : QUESTIONS[i].number;
 }
 
+// where the "next question" button leads: the next unanswered question (wrapping around),
+// or plain next once everything has been answered
+function nextTarget() {
+  const list = inOrder().map(q => q.number);
+  const at = list.findIndex(n => byNumber.get(n) > idx());
+  const after = at < 0 ? [] : list.slice(at);
+  const before = at < 0 ? list : list.slice(0, at);
+  const open = [...after, ...before].find(n => !(n in state.answers) && n !== state.current);
+  return open ?? neighbour(1);
+}
+
 // retry: forget the wrong answers so they can be answered again, and walk through just those
 function startRetry() {
   const wrong = wrongNumbers();
@@ -132,7 +143,7 @@ function paintAnswers(q) {
     b.classList.toggle('correct', done && j === q.correct);
     b.classList.toggle('wrong', done && j === chosen && j !== q.correct);
   });
-  $('continue').hidden = !(done && neighbour(1) !== null);
+  $('continue').hidden = !(done && nextTarget() !== null);
   $('explanation').hidden = !(done && q.explanation);
   $('explanation').textContent = q.explanation || '';
 }
@@ -196,7 +207,7 @@ const step = d => {
 // --- events ---
 $('prev').onclick = () => step(-1);
 $('next').onclick = () => step(1);
-$('continue').onclick = () => step(1);
+$('continue').onclick = () => go(nextTarget());
 $('toggle-grid').onclick = () => { $('grid').hidden = !$('grid').hidden; };
 $('say-question').onclick = () => speak(view(QUESTIONS[idx()]).text);
 $('auto-speak').checked = state.autoSpeak;
