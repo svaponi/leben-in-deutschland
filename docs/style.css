@@ -54,8 +54,6 @@ footer { display: flex; justify-content: center; align-items: center; flex-wrap:
 #lang .link { font-size: inherit; }
 #lang .link.active { color: #1f2937; font-weight: 700; text-decoration: none; }
 #explanation { margin-top: 16px; }
-#state-filter { margin: 16px 0 10px; padding-top: 12px; border-top: 1px solid #e5e7eb; font-size: .8rem; color: #4b5563; }
-#state-filter > span { font-weight: 600; margin-right: 8px; }
-#state-filter .link { margin-right: 6px; }
-.chips { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 6px; }
-.chips label { white-space: nowrap; }
+.states-bar { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e5e7eb; font-size: .8rem; }
+.states-bar .link { margin-left: 8px; }
+label.grid-heading.state { cursor: pointer; }

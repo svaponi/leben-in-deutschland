@@ -99,71 +99,70 @@ function renderStats() {
   $('bar-fill').style.width = `${(answered / active.length) * 100}%`;
 }
 
-function buildStateFilter() {
-  const f = $('state-filter');
-  const label = document.createElement('span');
-  label.dataset.i18n = 'states';
-  f.append(label);
-  const quick = (key, value) => {
-    const b = document.createElement('button');
-    b.className = 'link';
-    b.dataset.i18n = key;
-    b.onclick = () => setStates(value);
-    f.append(b);
-  };
-  quick('all', Object.keys(STATES));
-  quick('none', []);
-  const chips = document.createElement('div');
-  chips.className = 'chips';
-  for (const [code, name] of Object.entries(STATES)) {
-    const l = document.createElement('label');
-    const c = document.createElement('input');
-    c.type = 'checkbox';
-    c.value = code;
-    c.onchange = () => setStates(Object.keys(STATES).filter(k =>
-      k === code ? c.checked : state.states.includes(k)));
-    l.append(c, ' ' + name);
-    chips.append(l);
-  }
-  f.append(chips);
-}
 function setStates(list) {
   state.states = list;
   save();
   show(false);
 }
 
+function questionButton(q) {
+  const b = document.createElement('button');
+  b.textContent = q.number;
+  b.dataset.n = q.number;
+  if (q.region !== 'de') { b.classList.add('state'); b.title = STATES[q.region]; }
+  b.onclick = () => go(q.number);
+  return b;
+}
+
+// General questions are built once; the state sections (checkbox + questions when ticked) on every selection change.
 let gridFor = null;
 function renderGrid() {
-  if (gridFor !== state.states.join()) { // rebuild when the selected states change
-    gridFor = state.states.join();
-    $('grid-general').innerHTML = '';
-    $('grid-states').innerHTML = '';
-    let region = null;
-    activeQuestions().forEach(q => {
-      if (q.region !== region) {
-        region = q.region;
-        const h = document.createElement('div');
-        h.className = 'grid-heading' + (region === 'de' ? '' : ' state');
-        if (region === 'de') h.dataset.i18n = 'general';
-        h.textContent = region === 'de' ? ui().general : STATES[region];
-        (region === 'de' ? $('grid-general') : $('grid-states')).append(h);
-      }
-      const b = document.createElement('button');
-      b.textContent = q.number;
-      b.dataset.n = q.number;
-      if (region !== 'de') { b.classList.add('state'); b.title = STATES[region]; }
-      b.onclick = () => go(q.number);
-      (region === 'de' ? $('grid-general') : $('grid-states')).append(b);
-    });
+  const general = $('grid-general'), states = $('grid-states');
+  if (!general.children.length) {
+    const h = document.createElement('div');
+    h.className = 'grid-heading';
+    h.dataset.i18n = 'general';
+    h.textContent = ui().general;
+    general.append(h);
+    QUESTIONS.filter(q => q.region === 'de').forEach(q => general.append(questionButton(q)));
   }
-  for (const b of $('grid').querySelectorAll('.grid-items button')) {
+  if (gridFor !== state.states.join()) {
+    gridFor = state.states.join();
+    states.innerHTML = '';
+    const bar = document.createElement('div');
+    bar.className = 'grid-heading states-bar';
+    const title = document.createElement('span');
+    title.dataset.i18n = 'states';
+    title.textContent = ui().states;
+    bar.append(title);
+    [['all', Object.keys(STATES)], ['none', []]].forEach(([key, value]) => {
+      const b = document.createElement('button');
+      b.className = 'link';
+      b.dataset.i18n = key;
+      b.textContent = ui()[key];
+      b.onclick = () => setStates(value);
+      bar.append(b);
+    });
+    states.append(bar);
+    for (const [code, name] of Object.entries(STATES)) {
+      const l = document.createElement('label');
+      l.className = 'grid-heading state';
+      const c = document.createElement('input');
+      c.type = 'checkbox';
+      c.checked = state.states.includes(code);
+      c.onchange = () => setStates(Object.keys(STATES).filter(k =>
+        k === code ? c.checked : state.states.includes(k)));
+      l.append(c, ' ' + name);
+      states.append(l);
+      if (c.checked) QUESTIONS.filter(q => q.region === code).forEach(q => states.append(questionButton(q)));
+    }
+  }
+  for (const b of $('grid').querySelectorAll('.grid-items button[data-n]')) {
     const q = QUESTIONS[byNumber.get(+b.dataset.n)];
     b.classList.toggle('ok', q.number in state.answers && isRight(q));
     b.classList.toggle('bad', q.number in state.answers && !isRight(q));
     b.classList.toggle('cur', q.number === state.current);
   }
-  document.querySelectorAll('#state-filter input').forEach(c => { c.checked = state.states.includes(c.value); });
 }
 
 function paintAnswers(q) {
@@ -275,7 +274,6 @@ function setLang(lang) {
 }
 document.querySelectorAll('#lang button').forEach(b => { b.onclick = () => setLang(b.dataset.lang); });
 
-buildStateFilter();
 applyLang();
 // a focused button would otherwise be clicked when space is released
 document.addEventListener('keyup', e => { if (e.key === ' ' && e.target.tagName !== 'INPUT') e.preventDefault(); });
