@@ -1,0 +1,124 @@
+[
+  {
+    "number": 321,
+    "question": "Welches Wappen gehört zum Bundesland Berlin?",
+    "image": "/assets/321-berlin-wappen.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Das Wappen von Berlin zeigt den schwarzen Berliner Bären auf weißem Grund. Prägen Sie sich das Bild gut ein, im Test wird nur das richtige Wappen gesucht."
+  },
+  {
+    "number": 322,
+    "question": "Welches ist ein Bezirk von Berlin?",
+    "answers": [
+      "Altona",
+      "Prignitz",
+      "Pankow",
+      "Mecklenburgische Seenplatte"
+    ],
+    "correct": 2,
+    "explanation": "Pankow ist einer der zwölf Bezirke Berlins. Die anderen Antworten nennen Gebiete aus anderen Bundesländern."
+  },
+  {
+    "number": 323,
+    "question": "Für wie viele Jahre wird das Landesparlament in Berlin gewählt?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Das Landesparlament (Abgeordnetenhaus) in Berlin wird für fünf Jahre gewählt. Der Bundestag wird dagegen nur für vier Jahre gewählt."
+  },
+  {
+    "number": 324,
+    "question": "Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?",
+    "answers": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "In Berlin darf man bei Kommunalwahlen bereits ab 16 Jahren wählen. Das Wahlalter dafür legt jedes Bundesland selbst fest."
+  },
+  {
+    "number": 325,
+    "question": "Welche Farben hat die Landesflagge von Berlin?",
+    "answers": [
+      "blau-weiß-rot",
+      "weiß-rot",
+      "grün-weiß-rot",
+      "schwarz-gold"
+    ],
+    "correct": 1,
+    "explanation": "Die Landesflagge von Berlin ist weiß-rot. Verwechseln Sie sie nicht mit der Bundesflagge, die immer schwarz-rot-gold ist."
+  },
+  {
+    "number": 326,
+    "question": "Wo können Sie sich in Berlin über politische Themen informieren?",
+    "answers": [
+      "beim Ordnungsamt der Gemeinde",
+      "bei den Kirchen",
+      "bei der Verbraucherzentrale",
+      "bei der Landeszentrale für politische Bildung"
+    ],
+    "correct": 3,
+    "explanation": "Für politische Information ist die Landeszentrale für politische Bildung zuständig. Sie bietet in Berlin kostenlose Broschüren, Veranstaltungen und Materialien an."
+  },
+  {
+    "number": 327,
+    "question": "Welches Bundesland ist ein Stadtstaat?",
+    "answers": [
+      "Berlin",
+      "Saarland",
+      "Brandenburg",
+      "Hessen"
+    ],
+    "correct": 0,
+    "explanation": "Berlin ist ein Stadtstaat, also gleichzeitig Stadt und Bundesland. Die drei deutschen Stadtstaaten sind Berlin, Hamburg und Bremen."
+  },
+  {
+    "number": 328,
+    "question": "Welches Bundesland ist Berlin?",
+    "image": "/assets/328-welches-bundesland-berlin.png",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Berlin ist die Hauptstadt Deutschlands und liegt als Stadtstaat vollständig im Land Brandenburg. Suchen Sie auf der Karte die passende Form und Lage."
+  },
+  {
+    "number": 329,
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Berlin?",
+    "answers": [
+      "Ministerpräsident / Ministerpräsidentin",
+      "Oberbürgermeister / Oberbürgermeisterin",
+      "Präsident / Präsidentin des Senats",
+      "Regierender Bürgermeister / Regierende Bürgermeisterin"
+    ],
+    "correct": 3,
+    "explanation": "In Berlin heißt der Regierungschef oder die Regierungschefin Regierender Bürgermeister / Regierende Bürgermeisterin. Premierminister oder Erster Minister sind Bezeichnungen aus anderen Staaten."
+  },
+  {
+    "number": 330,
+    "question": "Welchen Senator / welche Senatorin hat Berlin nicht?",
+    "answers": [
+      "Finanzsenator / Finanzsenatorin",
+      "Innensenator / Innensenatorin",
+      "Senator / Senatorin für Außenbeziehungen",
+      "Justizsenator / Justizsenatorin"
+    ],
+    "correct": 2,
+    "explanation": "Außenpolitik ist allein Sache des Bundes. Kein Bundesland hat deshalb ein Außenministerium, wohl aber Senatorinnen und Senatoren für Finanzen, Inneres und Justiz."
+  }
+]
