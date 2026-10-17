@@ -44,3 +44,6 @@ footer { text-align: center; margin-top: 16px; }
 #answers .ans { flex: 1; }
 #answers .say { flex: none; width: 44px; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; cursor: pointer; font-size: 1rem; }
 #answers .say:hover { border-color: #2563eb; }
+.title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.title-row h1 { margin: 0; }
+#lang { padding: 6px 8px; font: inherit; font-size: .9rem; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; }

@@ -2,7 +2,7 @@ const KEY = 'lid-progress-v2';
 const $ = id => document.getElementById(id);
 
 // state: { answers: { [number]: chosenIndex }, current: number, autoSpeak: bool }
-const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false },
+const state = Object.assign({ answers: {}, current: QUESTIONS[0].number, autoSpeak: false, lang: 'de' },
   JSON.parse(localStorage.getItem(KEY) || '{}'));
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
@@ -12,27 +12,46 @@ const STATES = {
   rp: 'Rheinland-Pfalz', sl: 'Saarland', sn: 'Sachsen', st: 'Sachsen-Anhalt',
   sh: 'Schleswig-Holstein', th: 'Thüringen',
 };
+const UI = {
+  de: {
+    overview: 'Übersicht', continue: 'Nächste Frage →', speak: '🔊 Vorlesen', autoSpeak: 'automatisch vorlesen',
+    reset: 'Fortschritt zurücksetzen', confirmReset: 'Fortschritt wirklich zurücksetzen?',
+    sayAnswer: 'Antwort vorlesen', general: 'Allgemeine Fragen', speechLang: 'de-DE',
+    stats: (a, n, r) => `${a} / ${n} beantwortet · ${r} richtig`,
+    qnum: (q, n) => `Frage ${q} von ${n}`,
+  },
+  en: {
+    overview: 'Overview', continue: 'Next question →', speak: '🔊 Read aloud', autoSpeak: 'read aloud automatically',
+    reset: 'Reset progress', confirmReset: 'Really reset your progress?',
+    sayAnswer: 'Read answer aloud', general: 'General questions', speechLang: 'en-US',
+    stats: (a, n, r) => `${a} / ${n} answered · ${r} correct`,
+    qnum: (q, n) => `Question ${q} of ${n}`,
+  },
+};
+const ui = () => UI[state.lang] || UI.de;
+// localized view of a question: { text, answers }
+function view(q) {
+  const t = state.lang === 'en' && TRANSLATIONS_EN[q.number];
+  return t ? { text: t.q, answers: t.a } : { text: q.question, answers: q.answers };
+}
 const byNumber = new Map(QUESTIONS.map((q, i) => [q.number, i]));
 const idx = () => byNumber.get(state.current) ?? 0;
 const isRight = q => state.answers[q.number] === q.correct;
 
 // --- speech ---
-let germanVoice = null;
-function pickVoice() {
-  if (!('speechSynthesis' in window)) return;
-  const de = speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().replace('_', '-').startsWith('de'));
-  germanVoice = de.find(v => v.lang.toLowerCase().replace('_', '-') === 'de-de') || de[0] || null;
-}
-if ('speechSynthesis' in window) {
-  pickVoice();
-  speechSynthesis.addEventListener('voiceschanged', pickVoice); // voices load asynchronously
+const norm = l => l.toLowerCase().replace('_', '-');
+function voiceFor(lang) {
+  if (!('speechSynthesis' in window)) return null;
+  const all = speechSynthesis.getVoices().filter(v => norm(v.lang).startsWith(lang.slice(0, 2).toLowerCase()));
+  return all.find(v => norm(v.lang) === norm(lang)) || all[0] || null;
 }
 function speak(text) {
   if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'de-DE';
-  if (germanVoice) u.voice = germanVoice;
+  u.lang = ui().speechLang;
+  const v = voiceFor(u.lang); // voices load asynchronously; looked up at speak time
+  if (v) u.voice = v;
   speechSynthesis.speak(u);
 }
 
@@ -40,7 +59,7 @@ function speak(text) {
 function renderStats() {
   const answered = Object.keys(state.answers).length;
   const right = QUESTIONS.filter(q => q.number in state.answers && isRight(q)).length;
-  $('stats').textContent = `${answered} / ${QUESTIONS.length} beantwortet · ${right} richtig`;
+  $('stats').textContent = ui().stats(answered, QUESTIONS.length, right);
   $('bar-fill').style.width = `${(answered / QUESTIONS.length) * 100}%`;
 }
 
@@ -53,7 +72,8 @@ function renderGrid() {
         region = q.region;
         const h = document.createElement('div');
         h.className = 'grid-heading' + (region === 'de' ? '' : ' state');
-        h.textContent = region === 'de' ? 'Allgemeine Fragen' : STATES[region];
+        if (region === 'de') h.dataset.i18n = 'general';
+        h.textContent = region === 'de' ? ui().general : STATES[region];
         g.append(h);
       }
       const b = document.createElement('button');
@@ -89,14 +109,15 @@ function show(userInitiated) {
   const q = QUESTIONS[idx()];
   state.current = q.number;
   save();
-  $('qnum').textContent = `Frage ${q.number} von ${QUESTIONS[QUESTIONS.length - 1].number}` +
+  $('qnum').textContent = ui().qnum(q.number, QUESTIONS[QUESTIONS.length - 1].number) +
     (q.region !== 'de' ? ` · ${STATES[q.region]}` : '');
-  $('question').textContent = q.question;
+  const v = view(q);
+  $('question').textContent = v.text;
   $('image').hidden = !q.image;
   if (q.image) $('image').src = q.image;
   const ul = $('answers');
   ul.innerHTML = '';
-  q.answers.forEach((text, i) => {
+  v.answers.forEach((text, i) => {
     const li = document.createElement('li');
     const b = document.createElement('button');
     b.textContent = text;
@@ -105,8 +126,7 @@ function show(userInitiated) {
     const s = document.createElement('button');
     s.textContent = '🔊';
     s.className = 'say';
-    s.title = 'Antwort vorlesen';
-    s.setAttribute('aria-label', 'Antwort vorlesen');
+    s.title = s.ariaLabel = ui().sayAnswer;
     s.onclick = () => speak(text);
     li.append(b, s);
     ul.append(li);
@@ -116,7 +136,7 @@ function show(userInitiated) {
   $('next').disabled = idx() === QUESTIONS.length - 1;
   renderStats();
   renderGrid();
-  if (state.autoSpeak && userInitiated) speak(q.question);
+  if (state.autoSpeak && userInitiated) speak(v.text);
 }
 
 function answer(q, i) {
@@ -144,15 +164,15 @@ $('prev').onclick = () => step(-1);
 $('next').onclick = () => step(1);
 $('continue').onclick = () => step(1);
 $('toggle-grid').onclick = () => { $('grid').hidden = !$('grid').hidden; };
-$('speak').onclick = () => speak(QUESTIONS[idx()].question);
+$('speak').onclick = () => speak(view(QUESTIONS[idx()]).text);
 $('auto-speak').checked = state.autoSpeak;
 $('auto-speak').onchange = e => {
   state.autoSpeak = e.target.checked;
   save();
-  if (state.autoSpeak) speak(QUESTIONS[idx()].question);
+  if (state.autoSpeak) speak(view(QUESTIONS[idx()]).text);
 };
 $('reset').onclick = () => {
-  if (!confirm('Fortschritt wirklich zurücksetzen?')) return;
+  if (!confirm(ui().confirmReset)) return;
   state.answers = {};
   state.current = QUESTIONS[0].number;
   show(true);
@@ -164,4 +184,17 @@ document.addEventListener('keydown', e => {
   else if (/^[1-4]$/.test(e.key)) $('answers').children[+e.key - 1]?.firstChild.click();
 });
 
+function applyLang() {
+  document.documentElement.lang = state.lang;
+  $('lang').value = state.lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = ui()[el.dataset.i18n]; });
+}
+$('lang').onchange = e => {
+  state.lang = e.target.value;
+  window.speechSynthesis?.cancel();
+  applyLang();
+  show(false);
+};
+
+applyLang();
 show(false); // no auto speech on load: browsers block it until the first user interaction

@@ -9,14 +9,20 @@
 <body>
 <main>
   <header>
-    <h1>Leben in Deutschland</h1>
+    <div class="title-row">
+      <h1>Leben in Deutschland</h1>
+      <select id="lang" aria-label="Sprache / Language">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+      </select>
+    </div>
     <div id="stats"></div>
     <div class="bar"><div id="bar-fill"></div></div>
   </header>
 
   <nav class="toolbar">
     <button id="prev" title="Vorherige (←)">←</button>
-    <button id="toggle-grid">Übersicht</button>
+    <button id="toggle-grid" data-i18n="overview">Übersicht</button>
     <button id="next" title="Nächste (→)">→</button>
   </nav>
 
@@ -28,16 +34,17 @@
     <img id="image" alt="" hidden>
     <ul id="answers"></ul>
     <p id="explanation" hidden></p>
-    <button id="continue" hidden>Nächste Frage →</button>
+    <button id="continue" hidden data-i18n="continue">Nächste Frage →</button>
     <div class="speech">
-      <button id="speak" class="link">🔊 Vorlesen</button>
-      <label><input type="checkbox" id="auto-speak"> automatisch vorlesen</label>
+      <button id="speak" class="link" data-i18n="speak">🔊 Vorlesen</button>
+      <label><input type="checkbox" id="auto-speak"> <span data-i18n="autoSpeak">automatisch vorlesen</span></label>
     </div>
   </section>
 
-  <footer><button id="reset" class="link">Fortschritt zurücksetzen</button></footer>
+  <footer><button id="reset" class="link" data-i18n="reset">Fortschritt zurücksetzen</button></footer>
 </main>
 <script src="questions.js"></script>
+<script src="translations-en.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
